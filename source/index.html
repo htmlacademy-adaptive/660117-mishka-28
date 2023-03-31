@@ -1,12 +1,149 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
+</head>
 
-  </body>
+<body>
+
+  <header class="header">
+    <a class="header__logo" href="index.html">
+      <img src="/" width="86" height="35" alt="Логотип Mishka.">
+    </a>
+    <button class="header__button" type="button">
+      <span>Открыть меню.</span>
+    </button>
+    <nav class="header__nav nav">
+      <ul class="nav__site-list">
+        <li class="nav__site-item">
+          <a class="nav__site-link">Каталог товаров</a>
+        </li>
+        <li class="nav__site-item">
+          <a class="nav__site-link">Вязание на заказ</a>
+        </li>
+      </ul>
+      <ul class="nav__user-list">
+        <li class="nav__user-item">
+          <a class="nav__user-link">Поиск по сайту</a>
+        </li>
+        <li class="nav__user-item">
+          <a class="nav__user-link">Корзина: пока пуста</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="intro">
+      <h1 class="intro__title title title--page-title">Милые штуки ручной<br>работы для дома</h1>
+      <div class="intro__button-wrapper">
+        <button class="intro__button" type="button">Предметы<br>интерьера</button>
+        <button class="intro__button" type="button">Детские<br>игрушки</button>
+      </div>
+    </section>
+    <section class="offer">
+      <h2 class="offer__product-title title">Вязаные корзинки</h2>
+      <span class="offer__product-label">Товар недели</span>
+      <p class="offer__description">Экологически чистая пряжа,
+        ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+      <dl class="offer__description-list">
+        <dt class="description-option">Цвет:</dt>
+        <dd class="description-value">тиффани/серый</dd>
+        <dt class="description-option">Диаметр:</dt>
+        <dd class="description-value">25 см</dd>
+        <dt class="description-option">Высота:</dt>
+        <dd class="description-value">15 см</dd>
+      </dl>
+      <img class="offer__picture" src="/" width="260" height="315" alt="Вязаные корзинки">
+      <span class="offer__price">Цена: 990 руб.</span>
+      <button class="offer__button main-button" type="button">заказать</button>
+    </section>
+    <section class="advantages">
+      <h2 class="advantages__title title">Коротко о нас:</h2>
+      <ul class="advantages__list">
+        <li class="advantages__item">
+          Экологически чистые материалы
+        </li>
+        <li class="advantages__item">
+          Скандинавский стиль по российской цене
+        </li>
+        <li class="advantages__item">
+          Увеличивает лайки на фотографиях
+        </li>
+        <li class="advantages__item">
+          Связано вручную с любовью и умилением
+        </li>
+        <li class="advantages__item">
+          Поддержка отечественного производителя
+        </li>
+        <li class="advantages__item">
+          Поставляется в подарочной упаковке
+        </li>
+      </ul>
+    </section>
+    <section class="feedbacks">
+      <h2 class="feedbacks__title title">Отзывы</h2>
+      <p class="feedbacks__content">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
+        лайков, как
+        у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
+        и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+      <div class="feedbacks__author-wrapper">
+        <span class="feedbacks__name">Анастасия Красильникова</span>
+        <span class="feedbacks__email">@misssssiskras</span>
+      </div>
+      <div class="feedbacks__button-wrapper">
+        <button class="feedbacks__button-left" type="button">
+          <span>стрелка влево.</span>
+        </button>
+        <button class="feedbacks__button-right" type="button">
+          <span>стрелка вправо.</span>
+        </button>
+      </div>
+      <button class="feedbacks__button main-button" type="button">Написать</button>
+    </section>
+    <section class="contacts">
+      <h2 class="contacts__title title">Контакты</h2>
+      <dl class="contacts__list">
+        <dt class="contacts__option">e-mail:</dt>
+        <dd class="contacts__value">info@mimimishkashop.ru</dd>
+        <dt class="contacts__option">адрес:</dt>
+        <dd class="contacts__value">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</dd>
+      </dl>
+      <button class="contacts__button main-button" type="button">Напишите нам</button>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <ul class="footer__contacts-list">
+      <li class="footer__contacts-item">
+        <a class="footer__contacts-link" href="https://vk.com/htmlacademy">
+          <span>Ссылка на вконтакте.</span>
+        </a>
+      </li>
+      <li class="footer__contacts-item">
+        <a class="footer__contacts-link" href="https://www.youtube.com/user/htmlacademyru">
+          <span>Ссылка на youtube.</span>
+        </a>
+      </li>
+      <li class="footer__contacts-item">
+        <a class="footer__contacts-link" href="https://t.me/htmlacademy">
+          <span>Ссылка на телеграм.</span>
+        </a>
+      </li>
+    </ul>
+    <div class="footer__creator-wrapper">
+      <span class="footer__creator">Разработано
+        <a class="footer__creator-link" href="https://htmlacademy.ru/">
+          <span>Ссылка на htmlacademy.ru.</span>
+        </a>
+      </span>
+    </div>
+  </footer>
+
+</body>
+
 </html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Academy: Мишка</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <a class="header__logo" href="index.html">
+      <img src="/" width="86" height="35" alt="Логотип Mishka.">
+    </a>
+    <button class="header__button" type="button">
+      <span>Открыть меню.</span>
+    </button>
+    <nav class="header__nav nav">
+      <ul class="nav__site-list">
+        <li class="nav__site-item">
+          <a class="nav__site-link">Каталог товаров</a>
+        </li>
+        <li class="nav__site-item">
+          <a class="nav__site-link">Вязание на заказ</a>
+        </li>
+      </ul>
+      <ul class="nav__user-list">
+        <li class="nav__user-item">
+          <a class="nav__user-link">Поиск по сайту</a>
+        </li>
+        <li class="nav__user-item">
+          <a class="nav__user-link">Корзина: пока пуста</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="title title--page-title">Каталог товаров</h1>
+    <ul class="catalog">
+      <li class="catalog__item product">
+        <img class="product__img" src="/" width="260" height="195" alt="Зайка">
+        <div class="product__wrapper">
+          <h2 class="product__title title title--product"><a class="product__link" href="#">Зайчик-попрыгайчик</a></h2>
+          <span class="product-description">Рост 30 см, вес 200 г</span>
+          <div class="product__container">
+            <span class="product__price">1 200 руб.</span>
+            <button class="product__button" type="button">
+              <span>Положить в корзину.</span>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li class="catalog__item product">
+        <img class="product__img" src="/" width="260" height="195" alt="Корзинка для белья.">
+        <div class="product__wrapper">
+          <h2 class="product__title title title--product"><a class="product__link" href="#">Корзинка для белья</a></h2>
+          <span class="product-description">Диаметр 15 см, высота 10 см</span>
+          <div class="product__container">
+            <span class="product__price">690 руб.</span>
+            <button class="product__button" type="button">
+              <span>Положить в корзину.</span>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li class="catalog__item product">
+        <img class="product__img" src="/" width="260" height="195" alt="Большая корзинка для игрушек.">
+        <div class="product__wrapper">
+          <h2 class="product__title title title--product"><a class="product__link" href="#">Большая корзинка для
+              игрушек</a></h2>
+          <span class="product-description">Диаметр 30 см, высота 30 см</span>
+          <div class="product__container">
+            <span class="product__price">1 500 руб.</span>
+            <button class="product__button" type="button">
+              <span>Положить в корзину.</span>
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <section class="video">
+      <h2 class="video__title title title--video">Процесс производства</h2>
+      <video class="video__content" width="260" height="150" controls>
+        <source src="/">
+      </video>
+      <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
+        появляются наши товары.</p>
+      <button class="video__button main-button" type="button">Сделать заказ</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <ul class="footer__contacts-list">
+      <li class="footer__contacts-item">
+        <a class="footer__contacts-link" href="https://vk.com/htmlacademy">
+          <span>Ссылка на вконтакте.</span>
+        </a>
+      </li>
+      <li class="footer__contacts-item">
+        <a class="footer__contacts-link" href="https://www.youtube.com/user/htmlacademyru">
+          <span>Ссылка на youtube.</span>
+        </a>
+      </li>
+      <li class="footer__contacts-item">
+        <a class="footer__contacts-link" href="https://t.me/htmlacademy">
+          <span>Ссылка на телеграм.</span>
+        </a>
+      </li>
+    </ul>
+    <div class="footer__creator-wrapper">
+      <span class="footer__creator">Разработано
+        <a class="footer__creator-link" href="https://htmlacademy.ru/">
+          <span>Ссылка на htmlacademy.ru.</span>
+        </a>
+      </span>
+    </div>
+  </footer>
+
+</body>
+
+</html>

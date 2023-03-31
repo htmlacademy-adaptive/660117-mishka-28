@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Academy: Мишка</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <a class="header__logo" href="index.html">
+      <img src="/" width="86" height="35" alt="Логотип Mishka.">
+    </a>
+    <button class="header__button" type="button">
+      <span>Открыть меню.</span>
+    </button>
+    <nav class="header__nav nav">
+      <ul class="nav__site-list">
+        <li class="nav__site-item">
+          <a class="nav__site-link">Каталог товаров</a>
+        </li>
+        <li class="nav__site-item">
+          <a class="nav__site-link">Вязание на заказ</a>
+        </li>
+      </ul>
+      <ul class="nav__user-list">
+        <li class="nav__user-item">
+          <a class="nav__user-link">Поиск по сайту</a>
+        </li>
+        <li class="nav__user-item">
+          <a class="nav__user-link">Корзина: пока пуста</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <h1 class="title title--page-title">Вязание на заказ</h1>
+    <p class="page-description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
+      свяжемся с вами, чтобы уточнить детали.</p>
+    <form class="form" action="https://echo.htmlacademy.ru/" method="post">
+      <fieldset class="form-container form-container--type">
+        <legend class="form-container__title">Тип</legend>
+        <ul class="form-container-list form-container-list--type">
+          <li class="form-container-list__item">
+            <label class="form-option form-option--type">
+              Аксессуар для интерьера
+              <input class="form-radio-input" type="radio" name="type" value="interior-accessory">
+            </label>
+          </li>
+          <li class="form-container-list__item">
+            <label class="form-option form-option--type">
+              Детская игрушка
+              <input class="form-radio-input" type="radio" name="type" value="children-toy">
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="form-container">
+        <legend class="form-container__title">Цвет</legend>
+        <ul class="form-container-list form-container-list--color">
+          <li class="form-container-list__item">
+            <label class="form-option form-option--color">
+              Белый
+              <input class="form-checkbox-input" type="checkbox" name="color" value="white">
+            </label>
+          </li>
+          <li class="form-container-list__item">
+            <label class="form-option form-option--color">
+              Серый
+              <input class="form-checkbox-input" type="checkbox" name="color" value="grey">
+            </label>
+          </li>
+          <li class="form-container-list__item">
+            <label class="form-option form-option--color">
+              Тиффани
+              <input class="form-checkbox-input" type="checkbox" name="color" value="tiffany">
+            </label>
+          </li>
+          <li class="form-container-list__item">
+            <label class="form-option form-option--color">
+              Черный
+              <input class="form-checkbox-input" type="checkbox" name="color" value="black">
+            </label>
+          </li>
+          <li class="form-container-list__item">
+            <label class="form-option form-option--color">
+              Розовый
+              <input class="form-checkbox-input" type="checkbox" name="color" value="pink">
+            </label>
+          </li>
+          <li class="form-container-list__item">
+            <label class="form-option form-option--color">
+              Оранжевый
+              <input class="form-checkbox-input" type="checkbox" name="color" value="orange">
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="form-container">
+        <legend class="form-container__title">ФИО</legend>
+        <ul class="form-container-list form-container-list--name">
+          <li class="form-container-list__item">
+            <label class="form-option form-option--name">
+              Имя:
+              <input class="form-name-input" type="text" name="name" placeholder="Введите ваше имя*" required>
+            </label>
+          </li>
+          <li class="form-container-list__item">
+            <label class="form-option form-option--name">
+              Фамилия:
+              <input class="form-name-input" type="text" name="name" placeholder="Укажите фамилию*" required>
+            </label>
+          </li>
+          <li class="form-container-list__item">
+            <label class="form-option form-option--name">
+              Отчество:
+              <input class="form-name-input" type="text" name="name" placeholder="Отчество, если желаете">
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="form-container">
+        <legend class="form-container__title">Тел</legend>
+        <ul class="form-container-list form-container-list--phone">
+          <li class="form-container-list__item">
+            <label class="form-option form-option--phone">
+              <input class="form-phone-input" type="tel" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="form-container">
+        <legend class="form-container__title">E-mail</legend>
+        <ul class="form-container-list form-container-list--email">
+          <li class="form-container-list__item">
+            <label class="form-option form-option--email">
+              <input class="form-email-input" type="email" name="email" placeholder="Ваш Email*" required>
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="form-container">
+        <legend class="form-container__title">Доп</legend>
+        <ul class="form-container-list form-container-list--add">
+          <li class="form-container-list__item">
+            <label class="form-option form-option--add">
+              <textarea class="form-add-input" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <p class="form__notice">*Поля обязательны для заполнения</p>
+      <button class="form__button main-button" type="submit">Отправить заказ</button>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <ul class="footer__contacts-list">
+      <li class="footer__contacts-item">
+        <a class="footer__contacts-link" href="https://vk.com/htmlacademy">
+          <span>Ссылка на вконтакте.</span>
+        </a>
+      </li>
+      <li class="footer__contacts-item">
+        <a class="footer__contacts-link" href="https://www.youtube.com/user/htmlacademyru">
+          <span>Ссылка на youtube.</span>
+        </a>
+      </li>
+      <li class="footer__contacts-item">
+        <a class="footer__contacts-link" href="https://t.me/htmlacademy">
+          <span>Ссылка на телеграм.</span>
+        </a>
+      </li>
+    </ul>
+    <div class="footer__creator-wrapper">
+      <span class="footer__creator">Разработано
+        <a class="footer__creator-link" href="https://htmlacademy.ru/">
+          <span>Ссылка на htmlacademy.ru.</span>
+        </a>
+      </span>
+    </div>
+  </footer>
+
+</body>
+
+</html>
