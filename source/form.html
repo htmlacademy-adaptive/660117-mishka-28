@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
   <title>HTML Academy: Мишка</title>
 </head>
 
-<body>
+<body class="body">
 
   <header class="header">
     <a class="header__logo" href="index.html">
@@ -20,18 +21,18 @@
     <nav class="header__nav nav">
       <ul class="nav__site-list">
         <li class="nav__site-item">
-          <a class="nav__site-link">Каталог товаров</a>
+          <a class="nav__site-link" href="./catalog.html">Каталог товаров</a>
         </li>
         <li class="nav__site-item">
-          <a class="nav__site-link">Вязание на заказ</a>
+          <a class="nav__site-link" href="./form.html">Вязание на заказ</a>
         </li>
       </ul>
       <ul class="nav__user-list">
         <li class="nav__user-item">
-          <a class="nav__user-link">Поиск по сайту</a>
+          <a class="nav__user-link" href="#">Поиск по сайту</a>
         </li>
         <li class="nav__user-item">
-          <a class="nav__user-link">Корзина: пока пуста</a>
+          <a class="nav__user-link" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
     </nav>
@@ -39,7 +40,7 @@
 
   <main>
     <section class="intro intro--inner">
-      <h1 class="intro__title title title--page-title">Вязание на заказ</h1>
+      <h1 class="intro__title intro__title--inner intro__title--catalog">Вязание на заказ</h1>
       <p class="intro__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
         свяжемся с вами, чтобы уточнить детали.</p>
     </section>
@@ -50,13 +51,13 @@
           <legend class="form__title">Тип</legend>
           <ul class="form__list form__list--type">
             <li class="form__list-item">
-              <label class="form__radio radio">
+              <label class="form__label radio">
                 Аксессуар для интерьера
                 <input class="radio__input" type="radio" name="type" value="interior-accessory">
               </label>
             </li>
             <li class="form__list-item">
-              <label class="form__radio radio">
+              <label class="form__label radio">
                 Детская игрушка
                 <input class="radio__input" type="radio" name="type" value="children-toy">
               </label>
@@ -67,37 +68,37 @@
           <legend class="form__title">Цвет</legend>
           <ul class="form__list form__list--color">
             <li class="form__list-item">
-              <label class="form-checkbox checkbox">
+              <label class="form__label checkbox">
                 Белый
                 <input class="checkbox__input" type="checkbox" name="color" value="white">
               </label>
             </li>
             <li class="form__list-item">
-              <label class="form-checkbox checkbox">
+              <label class="form__label checkbox">
                 Серый
                 <input class="checkbox__input" type="checkbox" name="color" value="grey">
               </label>
             </li>
             <li class="form__list-item">
-              <label class="form-checkbox checkbox">
+              <label class="form__label checkbox">
                 Тиффани
                 <input class="checkbox__input" type="checkbox" name="color" value="tiffany">
               </label>
             </li>
             <li class="form__list-item">
-              <label class="form-checkbox checkbox">
+              <label class="form__label checkbox">
                 Черный
                 <input class="checkbox__input" type="checkbox" name="color" value="black">
               </label>
             </li>
             <li class="form__list-item">
-              <label class="form-checkbox checkbox">
+              <label class="form__label checkbox">
                 Розовый
                 <input class="checkbox__input" type="checkbox" name="color" value="pink">
               </label>
             </li>
             <li class="form__list-item">
-              <label class="form-checkbox checkbox">
+              <label class="form__label checkbox">
                 Оранжевый
                 <input class="checkbox__input" type="checkbox" name="color" value="orange">
               </label>
@@ -108,19 +109,19 @@
           <legend class="form__title">ФИО</legend>
           <ul class="form__list form__list--name">
             <li class="form__list-item">
-              <label class="form__input input">
+              <label class="form__label input">
                 Имя:
                 <input class="input__field" type="text" name="name" placeholder="Введите ваше имя*" required>
               </label>
             </li>
             <li class="form__list-item">
-              <label class="form__input input">
+              <label class="form__label input">
                 Фамилия:
                 <input class="input__field" type="text" name="name" placeholder="Укажите фамилию*" required>
               </label>
             </li>
             <li class="form__list-item">
-              <label class="form__input input">
+              <label class="form__label input">
                 Отчество:
                 <input class="input__field" type="text" name="name" placeholder="Отчество, если желаете">
               </label>
@@ -128,37 +129,37 @@
           </ul>
         </fieldset>
         <fieldset class="form__container">
-          <legend class="form__title">Тел</legend>
+          <legend class="form__title form__title--tel">Тел</legend>
           <ul class="form__list form__list--phone">
             <li class="form__list-item">
-              <label class="form__input input input--phone">
+              <label class="form__label input input--phone">
                 <input class="input__field" type="tel" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
               </label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__container">
-          <legend class="form__title">E-mail</legend>
+          <legend class="form__title form__title--email">E-mail</legend>
           <ul class="form__list form__list--email">
             <li class="form__list-item">
-              <label class="form__input input input--email">
+              <label class="form__label input input--email">
                 <input class="input__field" type="email" name="email" placeholder="Ваш Email*" required>
               </label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__container">
-          <legend class="form__title">Доп</legend>
+          <legend class="form__title form__title--add">Доп</legend>
           <ul class="form__list form__list--add">
             <li class="form__list-item">
-              <label class="form__input input input--add">
-                <textarea class="input__add" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              <label class="form__label input input--add">
+                <textarea class="input__field input__field--add" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               </label>
             </li>
           </ul>
         </fieldset>
         <p class="form__notice">*Поля обязательны для заполнения</p>
-        <button class="form__button main-button" type="submit">Отправить заказ</button>
+        <button class="form__button" type="submit">Отправить заказ</button>
       </form>
     </section>
   </main>

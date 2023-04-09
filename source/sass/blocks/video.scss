@@ -1,0 +1,27 @@
+@use '../global/bootstrap.scss';
+
+.video {
+    margin: 0 30px 58px;
+    border:  1px solid #ECECEC;
+}
+
+.video__title {
+    @include bootstrap.font-set(17px,24px,700,#000000);
+    padding: 21px 13px 26px 93px;
+    margin: 0;
+}
+
+.video__wrapper {
+    padding: 34px;
+}
+
+.video__description {
+    @include bootstrap.font-set(13px,24px);
+    margin-bottom: 41px;
+}
+
+.video__link {
+    @include bootstrap.font-set(18px,16px,700);
+    @include bootstrap.main-link;
+    padding: 16px 0;
+}

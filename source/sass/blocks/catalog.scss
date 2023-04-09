@@ -1,0 +1,17 @@
+@use '../global/bootstrap.scss';
+
+.catalog {
+    padding: 30px;
+}
+
+.catalog__list {
+    @include bootstrap.list-reset;
+}
+
+.catalog__item {
+    margin-bottom: 30px;
+}
+
+.catalog__item:last-child {
+    margin-bottom: 0;
+}

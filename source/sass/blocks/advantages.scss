@@ -1,0 +1,18 @@
+@use '../global/bootstrap.scss';
+
+.advantages {
+    padding: 31px 30px 58px;
+}
+
+.advantages__title {
+    @include bootstrap.title-base;
+}
+
+.advantages__list {
+    @include bootstrap.list-reset;
+}
+
+.advantages__item {
+    @include bootstrap.font-set(17px,20px,700,#000000);
+    padding-top: 82px;
+}

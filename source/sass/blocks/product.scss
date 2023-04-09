@@ -1,0 +1,22 @@
+@use '../global/bootstrap.scss';
+
+.product__wrapper {
+    padding: 28px;
+    border: 1px solid #ECECEC;
+}
+
+.product__link {
+    @include bootstrap.font-set(17px,24px,700,#000000);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 6px;
+}
+
+.product-description {
+    @include bootstrap.font-set(13px,30px);
+    margin-bottom: 17px;
+}
+
+.product__price {
+    @include bootstrap.font-set(15px,24px,700,#000000);
+}

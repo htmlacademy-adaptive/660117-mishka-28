@@ -1,0 +1,49 @@
+@use '../global/bootstrap.scss';
+
+.offer {
+    padding: 0 30px 42px;
+}
+.offer__product-title {
+    @include bootstrap.title-base;
+    margin-bottom: 17px;
+}
+
+.offer__product-label {
+    @include bootstrap.title-base;
+    font-size: 17px;
+    line-height: 20px;
+    color: #63d1bb;
+}
+
+.offer__description {
+    margin: 0;
+    margin-bottom: 28px;
+    @include bootstrap.font-set(15px,24px);
+}
+
+.offer__description-list {
+    margin: 0;
+    margin-bottom: 28px;
+    @include bootstrap.font-set(15px,20px);
+}
+.offer__value {
+    margin: 0;
+}
+
+.offer__picture {
+    margin-bottom: 25px;
+}
+
+.offer__price {
+    display: block;
+    @include bootstrap.title-base;
+    @include bootstrap.font-set(17px,24px,700);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.offer__link {
+    @include bootstrap.font-set(18px,18px,700);
+    @include bootstrap.main-link;
+    padding: 16px 0;
+}

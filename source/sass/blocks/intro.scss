@@ -1,0 +1,48 @@
+@use '../global/bootstrap.scss';
+
+.intro {
+    background-image: url("/");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 31px;
+}
+
+.intro__title {
+    padding: 73px 30px 120px;
+    @include bootstrap.title-base;
+    text-align: center;
+    font-size: 27px;
+    line-height: 30px;
+}
+
+.intro__title--inner {
+    background-color: #f1f1f1;
+    padding: 74px 42px;
+}
+
+.intro__title--catalog {
+    margin-bottom: 17px;
+}
+
+.intro__link {
+    display: block;
+    font-weight: 700;
+    font-size: 19px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 24px 0 31px 30px;
+}
+
+.intro__link--interiors {
+    background-color: #63d1bb;
+}
+
+.intro__link--toys {
+    background-color: #56c3b2;
+}
+
+.intro__description {
+    margin: 0;
+    padding: 0 30px;
+    @include bootstrap.font-set(13px,24px);
+}

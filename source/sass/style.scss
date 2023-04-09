@@ -1,1 +1,20 @@
-// Начните писать стили здесь
+@use './global/fonts.scss';
+@use './global/visually-hidden.scss';
+@use './global/box-sizing.scss';
+@use './blocks/body.scss';
+@use './blocks/header.scss';
+@use './blocks/nav.scss';
+@use './blocks/intro.scss';
+@use './blocks/offer.scss';
+@use './blocks/advantages.scss';
+@use './blocks/feedbacks.scss';
+@use './blocks/contacts.scss';
+@use './blocks/footer.scss';
+@use './blocks/catalog.scss';
+@use './blocks/product.scss';
+@use './blocks/video.scss';
+@use './blocks/form-section.scss';
+@use './blocks/form.scss';
+@use './blocks/checkbox.scss';
+@use './blocks/input.scss';
+@use './blocks/radio.scss';

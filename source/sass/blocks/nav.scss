@@ -1,0 +1,22 @@
+@use '../global/bootstrap.scss';
+
+.nav__site-list,
+.nav__user-list {
+    @include bootstrap.list-reset;
+}
+
+.nav__site-item,
+.nav__user-item {
+    padding: 27px 0 27px 76px;
+    box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+}
+
+.nav__site-link,
+.nav__user-link {
+    text-decoration: none;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    color: #000000;
+}

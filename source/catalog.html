@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
   <title>HTML Academy: Мишка</title>
 </head>
 
-<body>
+<body class="body">
 
   <header class="header">
     <a class="header__logo" href="index.html">
@@ -20,18 +21,18 @@
     <nav class="header__nav nav">
       <ul class="nav__site-list">
         <li class="nav__site-item">
-          <a class="nav__site-link">Каталог товаров</a>
+          <a class="nav__site-link" href="./catalog.html">Каталог товаров</a>
         </li>
         <li class="nav__site-item">
-          <a class="nav__site-link">Вязание на заказ</a>
+          <a class="nav__site-link" href="./form.html">Вязание на заказ</a>
         </li>
       </ul>
       <ul class="nav__user-list">
         <li class="nav__user-item">
-          <a class="nav__user-link">Поиск по сайту</a>
+          <a class="nav__user-link" href="#">Поиск по сайту</a>
         </li>
         <li class="nav__user-item">
-          <a class="nav__user-link">Корзина: пока пуста</a>
+          <a class="nav__user-link" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
     </nav>
@@ -39,7 +40,7 @@
 
   <main>
     <section class="intro intro--inner">
-      <h1 class="intro__title title title--page-title">Каталог товаров</h1>
+      <h1 class="intro__title intro__title--inner">Каталог товаров</h1>
     </section>
     <section class="catalog">
       <h2 class="visually-hidden">Каталог</h2>
@@ -86,16 +87,18 @@
       </ul>
     </section>
     <section class="video">
-      <h2 class="video__title title title--video">Процесс производства</h2>
+      <h2 class="video__title">Процесс производства</h2>
       <div class="video__player">
         <img class="video__img" src="/" alt="Корзиночка.">
         <button class="video__button" type="button">
           <span class="visually-hidden">Плей.</span>
         </button>
       </div>
-      <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
-        появляются наши товары.</p>
-      <a class="video__link main-link" href="#">Сделать заказ</a>
+      <div class="video__wrapper">
+        <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
+          появляются наши товары.</p>
+        <a class="video__link" href="#">Сделать заказ</a>
+      </div>
     </section>
   </main>
 
