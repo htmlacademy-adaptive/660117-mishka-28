@@ -1,18 +1,24 @@
-@use '../global/bootstrap.scss';
-
 .advantages {
-    padding: 31px 30px 58px;
+  padding: 30px;
 }
 
 .advantages__title {
-    @include bootstrap.title-base;
+  margin: 0;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
 }
 
 .advantages__list {
-    @include bootstrap.list-reset;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .advantages__item {
-    @include bootstrap.font-set(17px,20px,700,#000000);
-    padding-top: 82px;
+  padding-top: 82px;
+  font-size: 17px;
+  line-height: 20px;
+  color: $base-black;
+  font-weight: 700;
 }

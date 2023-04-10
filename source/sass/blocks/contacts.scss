@@ -1,34 +1,45 @@
-@use '../global/bootstrap.scss';
-
 .contacts {
-    padding-bottom: 35px;
+  padding: 38px 0 39px 0;
 }
 
 .contacts__title {
-    @include bootstrap.title-base;
-    margin: 0;
-    margin-bottom: 28px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 28px;
 }
 
 .contacts__list {
-    @include bootstrap.list-reset;
-    @include bootstrap.font-set(15px,20px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 15px;
+  line-height: 20px;
+  color: $light-black;
 }
 
 .contacts__container {
-    padding: 0 30px;
+  padding: 0 30px;
 }
 
 .contacts__container--info {
-    margin-bottom: 62px;
+  margin-bottom: 62px;
 }
 
 .contacts__value {
-    margin: 0;
+  margin: 0;
 }
 
 .contacts__link {
-    @include bootstrap.font-set(18px,20px,700);
-    @include bootstrap.main-link;
-    padding: 16px;
+  font-size: 18px;
+  line-height: 20px;
+  color: $light-black;
+  font-weight: 700;
+  border: 2px solid #444444;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  padding: 16px;
 }

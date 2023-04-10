@@ -1,17 +1,17 @@
-@use '../global/bootstrap.scss';
-
 .catalog {
-    padding: 30px;
+  padding: 30px;
 }
 
 .catalog__list {
-    @include bootstrap.list-reset;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .catalog__item {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .catalog__item:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }

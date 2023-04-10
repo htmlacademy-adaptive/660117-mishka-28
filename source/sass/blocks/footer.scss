@@ -1,18 +1,17 @@
-@use '../global/bootstrap.scss';
-
 .footer {
-    padding: 25px 30px;
-    background-color: #f1f1f1;
+  padding: 25px 30px;
+  background-color: #f1f1f1;
 }
 
 .footer__contacts-list {
-    @include bootstrap.list-reset;
-}
-
-.footer__creator-link {
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .footer__creator {
-    @include bootstrap.font-set(19x,18px,700,#000000);
+  font-size: 19px;
+  line-height: 18px;
+  color: $base-black;
+  font-weight: 700;
 }

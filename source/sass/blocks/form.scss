@@ -1,62 +1,75 @@
-@use '../global/bootstrap.scss';
-
 .form__container {
-    border: none;
-    margin: 0;
-    padding: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .form__container:last-child {
-    margin: 17px;
+  margin-bottom: 17px;
 }
 
 .form__title {
-    padding: 0;
-    @include bootstrap.font-set(17px,16px,700,#63d1bb);
-    text-transform: uppercase;
-    margin-bottom: 30px;
+  padding: 0;
+  font-size: 17px;
+  line-height: 16px;
+  color: $azure;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 .form__title--tel,
 .form__title--email {
-    margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .form__title--add {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .form__list {
-    display: grid;
-    @include bootstrap.list-reset;
-    margin-bottom: 30px;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 30px;
 }
 
 .form__list--type {
-    gap: 11px;
+  gap: 11px;
 }
 
 .form__list--color {
-    gap: 22px;
+  gap: 22px;
 }
 
 .form__list--name {
-    gap: 23px;
+  gap: 23px;
 }
 
 .form__label {
-    @include bootstrap.font-set(17px,18px,700,#000000);
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
 }
 
 .form__notice {
-    margin: 0 0 30px;
-    padding: 0;
-    @include bootstrap.font-set(14px,16px);
+  margin: 0 0 30px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: $light-black;
 }
 
 .form__button {
-    @include bootstrap.font-set(17px,16px,700);
-    @include bootstrap.main-link;
-    padding: 16px;
-    background-color: #ffffff;
+  font-size: 17px;
+  line-height: 16px;
+  color: $light-black;
+  font-weight: 700;
+  border: 2px solid #444444;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  padding: 16px;
+  background-color: #ffffff;
 }
