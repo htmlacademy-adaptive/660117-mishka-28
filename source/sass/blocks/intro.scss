@@ -1,9 +1,8 @@
 @use '../global/bootstrap.scss';
 
 .intro {
-    background-image: url("/");
+    background-image: url("../../img/content/intro.jpg");
     background-repeat: no-repeat;
-    background-position: center;
     margin-bottom: 31px;
 }
 
@@ -25,6 +24,7 @@
 }
 
 .intro__link {
+    position: relative;
     display: block;
     font-weight: 700;
     font-size: 19px;
@@ -37,9 +37,21 @@
     background-color: #63d1bb;
 }
 
+.intro__interiors-svg {
+  position: absolute;
+  top: 23px;
+  right: 36px;
+}
+
 .intro__link--toys {
     background-color: #56c3b2;
 }
+
+.intro__toys-svg {
+    position: absolute;
+    top: 21px;
+    right: 27px;
+  }
 
 .intro__description {
     margin: 0;

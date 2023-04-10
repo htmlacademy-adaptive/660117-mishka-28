@@ -1,3 +1,27 @@
 .header {
   background-color: #ffffff;
 }
+
+.header__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__logo {
+  padding: 22px;
+}
+
+.header__button {
+  position: absolute;
+  top: 32px;
+  right: 31px;
+  border: none;
+  width: 20px;
+  height: 14px;
+  background-color: #ffffff;
+  background-image: url('../../img/svg/menu-open.svg');
+  background-repeat: none;
+  background-position: center;
+}
