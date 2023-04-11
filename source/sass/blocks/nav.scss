@@ -1,0 +1,20 @@
+.nav__site-list,
+.nav__user-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__site-item,
+.nav__user-item {
+  padding: 27px 0 27px 76px;
+}
+
+.nav__site-link,
+.nav__user-link {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: $base-black;
+}

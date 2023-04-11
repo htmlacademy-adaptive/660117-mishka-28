@@ -1,0 +1,35 @@
+.video {
+  margin: 0 30px 58px 30px;
+  border:  1px solid $grey-border-color;
+}
+
+.video__title {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  padding: 21px 13px 26px 93px;
+  margin: 0;
+}
+
+.video__wrapper {
+  padding: 34px;
+}
+
+.video__description {
+  font-size: 13px;
+  line-height: 24px;
+  margin: 0 0 41px 0;
+  padding: 0;
+}
+
+.video__link {
+  font-size: 18px;
+  line-height: 16px;
+  color: $light-black;
+  font-weight: 700;
+  border: 2px solid $light-black;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  padding: 16px 0;
+}

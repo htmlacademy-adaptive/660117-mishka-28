@@ -1,0 +1,17 @@
+.footer {
+  padding: 25px 30px;
+  background-color: #f1f1f1;
+}
+
+.footer__contacts-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__creator {
+  font-size: 19px;
+  line-height: 18px;
+  color: $base-black;
+  font-weight: 700;
+}

@@ -1,0 +1,75 @@
+.form__container {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form__container:last-child {
+  margin-bottom: 17px;
+}
+
+.form__title {
+  padding: 0;
+  font-size: 17px;
+  line-height: 16px;
+  color: $azure;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.form__title--tel,
+.form__title--email {
+  margin-bottom: 4px;
+}
+
+.form__title--add {
+  margin-bottom: 20px;
+}
+
+.form__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.form__list--type {
+  gap: 11px;
+}
+
+.form__list--color {
+  gap: 22px;
+}
+
+.form__list--name {
+  gap: 23px;
+}
+
+.form__label {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.form__notice {
+  margin: 0 0 30px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: $light-black;
+}
+
+.form__button {
+  font-size: 17px;
+  line-height: 16px;
+  color: $light-black;
+  font-weight: 700;
+  border: 2px solid #444444;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  padding: 16px;
+  background-color: #ffffff;
+}

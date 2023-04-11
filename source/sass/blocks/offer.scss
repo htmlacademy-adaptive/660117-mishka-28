@@ -1,0 +1,58 @@
+.offer {
+  padding: 31px 30px 42px 30px;
+}
+.offer__product-title {
+  margin: 0 0 17px 0;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.offer__product-label {
+  margin: 0;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: $azure;
+}
+
+.offer__description {
+  margin: 0 0 28px 0;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.offer__description-list {
+  margin: 0 0 28px 0;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.offer__value {
+  margin: 0;
+}
+
+.offer__picture {
+  margin-bottom: 25px;
+}
+
+.offer__price {
+  display: block;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.offer__link {
+  font-size: 18px;
+  line-height: 18px;
+  color: $light-black;
+  font-weight: 700;
+  padding: 16px;
+  border: 2px solid $light-black;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+}

@@ -1,1 +1,18 @@
-// Начните писать стили здесь
+@import './global/variables.scss';
+@import './global/fonts.scss';
+@import './global/reboot.scss';
+@import './global/utils.scss';
+@import './blocks/header.scss';
+@import './blocks/nav.scss';
+@import './blocks/intro.scss';
+@import './blocks/offer.scss';
+@import './blocks/advantages.scss';
+@import './blocks/feedbacks.scss';
+@import './blocks/contacts.scss';
+@import './blocks/footer.scss';
+@import './blocks/catalog.scss';
+@import './blocks/product.scss';
+@import './blocks/video.scss';
+@import './blocks/form-section.scss';
+@import './blocks/form.scss';
+@import './blocks/input.scss';

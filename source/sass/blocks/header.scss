@@ -1,0 +1,25 @@
+@import url('../global/variables.scss');
+
+.header__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__logo {
+  padding: 22px;
+}
+
+.header__button {
+  position: absolute;
+  top: 32px;
+  right: 31px;
+  border: none;
+  width: 20px;
+  height: 14px;
+  background-color: $white;
+  background-image: url('../../img/svg/menu-open.svg');
+  background-repeat: none;
+  background-position: center;
+}
