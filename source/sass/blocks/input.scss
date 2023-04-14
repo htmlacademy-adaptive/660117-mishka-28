@@ -20,3 +20,11 @@
   padding: 17px;
   box-shadow: none;
 }
+
+@media (min-width: $tablet-width) {
+  .input {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+}

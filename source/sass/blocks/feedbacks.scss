@@ -37,15 +37,102 @@
   color: $light-black;
 }
 
+.feedbacks__button-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 38px;
+}
+
 .feedbacks__link {
   font-size: 18px;
   line-height: 20px;
   color: $light-black;
   font-weight: 700;
-  border: 2px solid #444444;
+  border: 2px solid $light-black;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   display: block;
   padding: 16px;
+  max-width: 260px;
+}
+
+.feedbacks__button {
+  background-color: $white;
+  border: 1px solid $grey-border-color;
+  display: block;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feedbacks__button--left {
+  background-image: url("../img/svg/arrow-left.svg");
+}
+
+.feedbacks__button--right {
+  background-image: url("../img/svg/arrow-right.svg");
+}
+
+@media (min-width: $tablet-width) {
+  .feedbacks {
+    padding: 80px 50px 47px 50px;
+    background-image: url("../img/content/feebaks.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title link"
+                         "content content";
+    position: relative;
+  }
+
+  .feedbacks__title {
+    grid-area: title;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .feedbacks__slider {
+    grid-area: content;
+  }
+
+  .feedbacks__button-wrapper {
+    position: absolute;
+    right: 69px;
+    bottom: 63px;
+    gap: 37px;
+  }
+
+  .feedbacks__button {
+    border: none;
+    width: 50px;
+    height: 26px;
+  }
+
+  .feedbacks__link {
+    grid-area: link;
+    max-width: 175px;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedbacks {
+    padding: 80px 0 96px 175px;
+    margin: 0 50px;
+  }
+
+  .feedbacks__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .feedbacks__button-wrapper {
+    position: absolute;
+    right: 69px;
+    bottom: 111px;
+    gap: 37px;
+  }
 }

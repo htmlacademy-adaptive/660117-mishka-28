@@ -22,3 +22,31 @@
   color: $base-black;
   font-weight: 700;
 }
+
+@media (min-width: $tablet-width) {
+  .advantages {
+    padding: 55px 50px 83px 50px;
+  }
+
+  .advantages__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .advantages__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages {
+    padding: 68px 50px 90px 225px;
+  }
+
+  .advantages__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}

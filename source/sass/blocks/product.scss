@@ -23,3 +23,30 @@
   line-height: 24px;
   font-weight: 700;
 }
+
+@media (min-width: $tablet-width) {
+  .catalog__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product__wrapper {
+    padding: 27px 32px 25px 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog__item {
+    display: block;
+  }
+
+  .product__wrapper {
+    padding: 27px 32px 25px 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

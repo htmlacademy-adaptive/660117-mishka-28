@@ -66,10 +66,48 @@
   line-height: 16px;
   color: $light-black;
   font-weight: 700;
-  border: 2px solid #444444;
+  border: 2px solid $light-black;
   text-align: center;
   text-transform: uppercase;
   display: block;
   padding: 16px;
-  background-color: #ffffff;
+  background-color: $white;
+}
+
+@media (min-width: $tablet-width) {
+  .form__container {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+  }
+
+  .form__list--color {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form__button-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__container {
+    display: block;
+  }
+
+  .form__list--color {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .form__button-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .form__title {
+    position: absolute;
+    left: 100px;
+  }
 }

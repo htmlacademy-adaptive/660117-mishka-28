@@ -33,3 +33,45 @@
   display: block;
   padding: 16px 0;
 }
+
+@media (min-width: $tablet-width) {
+  .video {
+    margin: 0 50px 64px 50px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .video__player {
+    order: 1;
+  }
+
+  .video__title {
+    order: 2;
+  }
+
+  .video__wrapper {
+    order: 3;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .video {
+    margin: 0 50px 105px 50px;
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    grid-template-areas: "player title"
+                         "player content";
+  }
+
+  .video__player {
+    grid-area: player;
+  }
+
+  .video__title {
+    grid-area: title;
+  }
+
+  .video__wrapper {
+    grid-area: content;
+  }
+}
