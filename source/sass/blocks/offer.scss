@@ -5,8 +5,8 @@
     display: grid;
     grid-template-columns: auto 334px;
     grid-template-areas: "title title"
-                         "content image"
-                         "button image";
+      "content image"
+      "button image";
     padding: 42px 50px 70px 50px;
     column-gap: 42px;
   }
@@ -15,8 +15,8 @@
     padding: 54px 50px 96px 225px;
     grid-template-columns: auto 525px;
     grid-template-areas: "title title"
-                         "content image"
-                         "button image";
+      "content image"
+      "button image";
     column-gap: 56px;
     position: relative;
   }
@@ -126,10 +126,11 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 153px;
-}
+  }
 
-.offer__button-wrapper {
-  @media (min-width: $tablet-width) {
-    grid-area: button;
+  .offer__button-wrapper {
+    @media (min-width: $tablet-width) {
+      grid-area: button;
+    }
   }
 }
