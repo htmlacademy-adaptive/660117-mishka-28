@@ -1,15 +1,26 @@
 .footer {
   padding: 25px 30px;
   background-color: #f1f1f1;
+
+  @media (min-width: $tablet-width) {
+    padding: 51px 50px 58px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .footer__mishka-link {
   width: 102px;
   height: 34px;
-  background-image: url("../../img/svg/mishka-logo-footer.svg");
+  background-image: url("../img/svg/mishka-logo-footer.svg");
   background-repeat: no-repeat;
   background-position: center;
   display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
 .footer__contacts-list {
@@ -20,13 +31,19 @@
   justify-content: center;
   gap: 29px;
   border-bottom: 1px solid $dark-grey;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+  }
 }
 
 .footer__contacts-link--vk {
   display: block;
   width: 28px;
   height: 22px;
-  background-image: url("../../img/svg/vk.svg");
+  background-image: url("../img/svg/vk.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -35,7 +52,7 @@
   display: block;
   width: 28px;
   height: 22px;
-  background-image: url("../../img/svg/youtube.svg");
+  background-image: url("../img/svg/youtube.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -44,7 +61,7 @@
   display: block;
   width: 28px;
   height: 22px;
-  background-image: url("../../img/svg/telegram.svg");
+  background-image: url("../img/svg/telegram.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -56,9 +73,13 @@
   height: 35px;
   margin: 22px auto 0 auto;
 
-  background-image: url("../../img/svg/htmlacademy.svg.svg");
+  background-image: url("../img/svg/htmlacademy.svg.svg");
   background-position: 155px center;
   background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .footer__creator {
@@ -66,27 +87,4 @@
   line-height: 18px;
   color: $base-black;
   font-weight: 700;
-}
-
-@media (min-width: $tablet-width) {
-  .footer {
-    padding: 51px 50px 58px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer__mishka-link {
-    display: block;
-  }
-
-  .footer__contacts-list {
-    margin: 0;
-    padding: 0;
-    border-bottom: none;
-  }
-  
-  .footer__creator-link {
-    margin: 0;
-  }
 }

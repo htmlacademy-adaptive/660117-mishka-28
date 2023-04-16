@@ -1,10 +1,43 @@
 .offer {
   padding: 30px 30px 42px 30px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: auto 334px;
+    grid-template-areas: "title title"
+                         "content image"
+                         "button image";
+    padding: 42px 50px 70px 50px;
+    column-gap: 42px;
+  }
+  
+  @media (min-width: $desktop-width) {
+    padding: 54px 50px 96px 225px;
+    grid-template-columns: auto 525px;
+    grid-template-areas: "title title"
+                         "content image"
+                         "button image";
+    column-gap: 56px;
+    position: relative;
+  }
 }
 
 .offer__title-wrapper {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    grid-area: title;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    flex-direction: row-reverse;
+    top: 61px;
+    left: -125px;
+  }
 }
 
 .offer__product-title {
@@ -12,6 +45,16 @@
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .offer__product-label {
@@ -48,6 +91,10 @@
 
 .offer__picture {
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: image;
+  }
 }
 
 .offer__price {
@@ -72,65 +119,17 @@
   max-width: 292px;
 }
 
-@media (min-width: $tablet-width) {
-  .offer {
-    display: grid;
-    grid-template-columns: auto 334px;
-    grid-template-areas: "title title"
-                         "content image"
-                         "button image";
-    padding: 42px 50px 70px 50px;
-    column-gap: 42px;
-  }
-
-  .offer__title-wrapper {
-    grid-area: title;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .offer__product-title {
-    font-size: 43px;
-    line-height: 50px;
-  }
-
-  .offer__content-wrapper {
+.offer__content-wrapper {
+  @media (min-width: $tablet-width) {
     grid-area: content;
   }
 
-  .offer__picture {
-    grid-area: image;
-  }
-
-  .offer__button-wrapper {
-    grid-area: button;
-  }
+  @media (min-width: $desktop-width) {
+    padding-top: 153px;
 }
 
-@media (min-width: $desktop-width) {
-  .offer {
-    padding: 54px 50px 96px 225px;
-    grid-template-columns: auto 525px;
-    grid-template-areas: "title title"
-                         "content image"
-                         "button image";
-    column-gap: 56px;
-    position: relative;
-  }
-
-  .offer__title-wrapper {
-    position: absolute;
-    flex-direction: row-reverse;
-    top: 61px;
-    left: -125px;
-  }
-
-  .offer__product-title {
-    font-size: 53px;
-    line-height: 57px;
-  }
-
-  .offer__content-wrapper {
-    padding-top: 153px;
+.offer__button-wrapper {
+  @media (min-width: $tablet-width) {
+    grid-area: button;
   }
 }

@@ -1,6 +1,20 @@
 .video {
   margin: 0 30px 58px 30px;
   border:  1px solid $grey-border-color;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 50px 64px 50px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 50px 105px 50px;
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    grid-template-areas: "player title"
+                         "player content";
+  }
 }
 
 .video__title {
@@ -9,10 +23,26 @@
   font-weight: 700;
   padding: 21px 13px 26px 93px;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: title;
+  }
 }
 
 .video__wrapper {
   padding: 34px;
+
+  @media (min-width: $tablet-width) {
+    order: 3;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: content;
+  }
 }
 
 .video__description {
@@ -34,44 +64,12 @@
   padding: 16px 0;
 }
 
-@media (min-width: $tablet-width) {
-  .video {
-    margin: 0 50px 64px 50px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .video__player {
+.video__player {
+  @media (min-width: $tablet-width) {
     order: 1;
   }
 
-  .video__title {
-    order: 2;
-  }
-
-  .video__wrapper {
-    order: 3;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .video {
-    margin: 0 50px 105px 50px;
-    display: grid;
-    grid-template-columns: 1.8fr 1fr;
-    grid-template-areas: "player title"
-                         "player content";
-  }
-
-  .video__player {
+  @media (min-width: $desktop-width) {
     grid-area: player;
-  }
-
-  .video__title {
-    grid-area: title;
-  }
-
-  .video__wrapper {
-    grid-area: content;
   }
 }

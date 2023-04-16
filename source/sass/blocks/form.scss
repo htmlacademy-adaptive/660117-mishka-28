@@ -2,6 +2,15 @@
   border: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }
 
 .form__container:last-child {
@@ -16,6 +25,11 @@
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 30px;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    left: 100px;
+  }
 }
 
 .form__title--tel,
@@ -41,6 +55,14 @@
 
 .form__list--color {
   gap: 22px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .form__list--name {
@@ -72,42 +94,18 @@
   display: block;
   padding: 16px;
   background-color: $white;
-}
 
-@media (min-width: $tablet-width) {
-  .form__container {
-    display: grid;
-    grid-template-columns: 1fr 2.5fr;
-  }
-
-  .form__list--color {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .form__button-wrapper {
+  @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .form__container {
-    display: block;
-  }
-
-  .form__list--color {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .form__button-wrapper {
+.form__button-wrapper {
+  @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-  }
-
-  .form__title {
-    position: absolute;
-    left: 100px;
   }
 }
