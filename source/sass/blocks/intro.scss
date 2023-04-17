@@ -1,10 +1,27 @@
-.intro__main {
-  background-image: url("../../img/content/intro.jpg");
+.intro--main {
+  background-image: url("../img/content/intro.jpg");
   background-repeat: no-repeat;
+  background-position-x: center;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/content/intro-tablet.jpg");
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/svg/zigzag-fill.svg");
+    }
+  }
 }
 
 .intro__title {
-  padding: 73px 30px 120px 30px;
+  padding: 73px 0 120px 0;
   margin: 0;
   font-weight: 700;
   font-size: 27px;
@@ -52,9 +69,18 @@
 }
 
 .intro__description {
-  margin: 0;
-  padding: 0 30px;
   font-size: 13px;
   line-height: 24px;
   color: $light-black;
+
+  @media (min-width: $desktop-width) {
+    padding: 0 225px;
+  }
+}
+
+.intro__link-wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }

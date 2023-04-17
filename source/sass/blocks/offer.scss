@@ -1,19 +1,77 @@
 .offer {
-  padding: 31px 30px 42px 30px;
+  padding-top: 30px;
+  padding-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: auto 334px;
+    grid-template-areas: "title title"
+      "content image"
+      "button image";
+    padding-top: 42px;
+    padding-bottom: 70px;
+    column-gap: 42px;
+  }
+  
+  @media (min-width: $desktop-width) {
+    padding-top: 54px;
+    padding-bottom: 96px;
+    padding-left: 225px;
+    grid-template-columns: auto 525px;
+    column-gap: 56px;
+    position: relative;
+  }
 }
+
+.offer__title-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    grid-area: title;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    flex-direction: row-reverse;
+    top: 61px;
+    left: -168px;
+  }
+}
+
 .offer__product-title {
-  margin: 0 0 17px 0;
+  margin: 0;
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .offer__product-label {
-  margin: 0;
+  margin: 0 0 17px 0;
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
   color: $azure;
+  order: 2;
+}
+
+.offer__description-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  padding: 13px 0;
+  border-bottom: 1px solid $grey-border-color;
 }
 
 .offer__description {
@@ -34,6 +92,10 @@
 
 .offer__picture {
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: image;
+  }
 }
 
 .offer__price {
@@ -55,4 +117,21 @@
   text-align: center;
   text-transform: uppercase;
   display: block;
+  max-width: 292px;
+}
+
+.offer__content-wrapper {
+  @media (min-width: $tablet-width) {
+    grid-area: content;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 153px;
+  }
+}
+
+.offer__button-wrapper {
+  @media (min-width: $tablet-width) {
+    grid-area: button;
+  }
 }

@@ -1,20 +1,124 @@
-.nav__site-list,
-.nav__user-list {
+.nav {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "logo nav-user"
+                         "nav-site delivery";
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 150px 1fr;
+    grid-template-areas: "nav-site logo nav-user"
+                         "nav-desktop . delivery";
+  }
+}
+
+.nav__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 0;
+
+  @media (min-width: $tablet-width) {
+    grid-area: logo;
+  }
+}
+
+.nav__logo {
+  width: 86px;
+  height: 35px;
+  background-image: url("../img/svg/mishka-logo-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    width: 113px;
+    height: 46px;
+    background-image: url("../img/svg/mishka-logo-tablet.svg");
+    margin-right: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 150px;
+    height: 72px;
+    background-image: url("../img/svg/mishka-logo-desktop.svg");
+  }
+}
+
+.nav__button {
+  position: absolute;
+  top: 32px;
+  right: 31px;
+  border: none;
+  width: 20px;
+  height: 14px;
+  background-color: $white;
+  background-image: url('../img/svg/menu-open.svg');
+  background-repeat: none;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.nav__list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.nav__site-item,
-.nav__user-item {
+.nav__list--user {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    grid-area: nav-user;
+  }
+}
+
+.nav__list--site {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    grid-area: nav-site;
+  }
+}
+
+.nav__list--desktop {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.nav__item {
   padding: 27px 0 27px 76px;
 }
 
-.nav__site-link,
-.nav__user-link {
+.nav__item--site {
+  @media (min-width: $tablet-width) {
+    font-size: 15px;
+    padding: 21px 0;
+    width: 167px;
+  }
+}
+
+.nav__link {
   font-family: inherit;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   color: $base-black;
+}
+
+.nav__delivery-offer {
+  color: $light-black;
+  padding: 21px 0;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    text-align: end;
+    grid-area: delivery;
+  }
 }

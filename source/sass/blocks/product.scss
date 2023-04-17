@@ -1,6 +1,13 @@
 .product__wrapper {
   padding: 28px;
   border: 1px solid $grey-border-color;
+
+  @media (min-width: $tablet-width) {
+    padding: 27px 32px 25px 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .product__link {
@@ -22,4 +29,15 @@
   font-size: 15px;
   line-height: 24px;
   font-weight: 700;
+}
+
+.catalog__item {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }

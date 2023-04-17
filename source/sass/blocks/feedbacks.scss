@@ -1,5 +1,26 @@
 .feedbacks {
-  padding: 30px 30px 51px 30px;
+  padding-top: 30px;
+  padding-bottom: 51px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+    padding-bottom: 47px;
+    background-image: url("../img/content/feebaks.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title link"
+                         "content content";
+    position: relative;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 225px;
+    padding-top: 80px;
+    padding-bottom: 47px;
+  }
 }
 
 .feedbacks__title {
@@ -8,6 +29,17 @@
   font-size: 25px;
   line-height: 30px;
   margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+.feedbacks__slider {
+  @media (min-width: $tablet-width) {
+    grid-area: content;
+  }
 }
 
 .feedbacks__slide {
@@ -37,15 +69,65 @@
   color: $light-black;
 }
 
+.feedbacks__button-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    right: 69px;
+    bottom: 63px;
+    gap: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    right: 69px;
+    bottom: 111px;
+    gap: 37px;
+  }
+}
+
 .feedbacks__link {
   font-size: 18px;
   line-height: 20px;
   color: $light-black;
   font-weight: 700;
-  border: 2px solid #444444;
+  border: 2px solid $light-black;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   display: block;
   padding: 16px;
+  max-width: 260px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: link;
+    max-width: 175px;
+    margin-left: auto;
+  }
+}
+
+.feedbacks__button {
+  background-color: $white;
+  border: 1px solid $grey-border-color;
+  display: block;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    width: 50px;
+    height: 26px;
+  }
+}
+
+.feedbacks__button--left {
+  background-image: url("../img/svg/arrow-left.svg");
+}
+
+.feedbacks__button--right {
+  background-image: url("../img/svg/arrow-right.svg");
 }

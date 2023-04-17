@@ -1,7 +1,16 @@
 .form__container {
   border: none;
-  margin: 0;
-  padding: 0;
+  
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    padding: 0 225px;
+    position: relative;
+  }
 }
 
 .form__container:last-child {
@@ -16,6 +25,11 @@
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 30px;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    left: 60px;
+  }
 }
 
 .form__title--tel,
@@ -41,6 +55,14 @@
 
 .form__list--color {
   gap: 22px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .form__list--name {
@@ -66,10 +88,21 @@
   line-height: 16px;
   color: $light-black;
   font-weight: 700;
-  border: 2px solid #444444;
+  border: 2px solid $light-black;
   text-align: center;
   text-transform: uppercase;
   display: block;
   padding: 16px;
-  background-color: #ffffff;
+  background-color: $white;
+}
+
+.form__button-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  @media (min-width: $desktop-width) {
+    padding: 0 225px;
+  }
 }

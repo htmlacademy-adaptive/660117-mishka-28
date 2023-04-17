@@ -1,15 +1,40 @@
 .catalog {
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 67px;
+    padding-bottom: 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 111px;
+    padding-bottom: 57px;
+  }
 }
 
 .catalog__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 51px;
+  }
 }
 
 .catalog__item {
   margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
 .catalog__item:last-child {
