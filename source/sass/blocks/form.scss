@@ -1,8 +1,6 @@
 .form__container {
   border: none;
-  margin: 0;
-  padding: 0;
-
+  
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 2.5fr;
@@ -10,6 +8,8 @@
 
   @media (min-width: $desktop-width) {
     display: block;
+    padding: 0 225px;
+    position: relative;
   }
 }
 
@@ -28,7 +28,7 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    left: 100px;
+    left: 60px;
   }
 }
 
@@ -94,18 +94,15 @@
   display: block;
   padding: 16px;
   background-color: $white;
+}
 
+.form__button-wrapper {
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
   }
-}
-
-.form__button-wrapper {
   @media (min-width: $desktop-width) {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    padding: 0 225px;
   }
 }

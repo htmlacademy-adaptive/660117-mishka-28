@@ -1,11 +1,7 @@
 .form-section {
-  padding: 30px 30px 50px 30px;
+  padding-bottom: 50px;
 
   @media (min-width: $tablet-width) {
-    padding: 63px 50px 50px 50px;
-  }
-  
-  @media (min-width: $desktop-width) {
-    padding: 63px 225px 50px 225px;
+    padding: 0;
   }
 }

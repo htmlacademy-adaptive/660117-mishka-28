@@ -1,0 +1,11 @@
+.container {
+    min-width: 320px;
+    width: 100%;
+    max-width: 1150px;
+    padding: 0 30px;
+    margin: 0 auto;
+    
+    @media (min-width: $tablet-width) {
+      padding: 0 50px;
+    }
+}

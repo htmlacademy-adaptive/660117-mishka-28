@@ -1,12 +1,16 @@
 .advantages {
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   @media (min-width: $tablet-width) {
-    padding: 55px 50px 83px 50px;
+    padding-top: 55px;
+    padding-bottom: 83px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 68px 50px 90px 225px;
+    padding-top: 68px;
+    padding-bottom: 90px;
+    padding-left: 225px;
   }
 }
 

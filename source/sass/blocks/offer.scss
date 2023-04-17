@@ -1,5 +1,6 @@
 .offer {
-  padding: 30px 30px 42px 30px;
+  padding-top: 30px;
+  padding-bottom: 42px;
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -7,16 +8,16 @@
     grid-template-areas: "title title"
       "content image"
       "button image";
-    padding: 42px 50px 70px 50px;
+    padding-top: 42px;
+    padding-bottom: 70px;
     column-gap: 42px;
   }
   
   @media (min-width: $desktop-width) {
-    padding: 54px 50px 96px 225px;
+    padding-top: 54px;
+    padding-bottom: 96px;
+    padding-left: 225px;
     grid-template-columns: auto 525px;
-    grid-template-areas: "title title"
-      "content image"
-      "button image";
     column-gap: 56px;
     position: relative;
   }
@@ -36,7 +37,7 @@
     position: absolute;
     flex-direction: row-reverse;
     top: 61px;
-    left: -125px;
+    left: -168px;
   }
 }
 
@@ -127,10 +128,10 @@
   @media (min-width: $desktop-width) {
     padding-top: 153px;
   }
+}
 
-  .offer__button-wrapper {
-    @media (min-width: $tablet-width) {
-      grid-area: button;
-    }
+.offer__button-wrapper {
+  @media (min-width: $tablet-width) {
+    grid-area: button;
   }
 }

@@ -1,15 +1,15 @@
-.video {
-  margin: 0 30px 58px 30px;
-  border:  1px solid $grey-border-color;
+.video__container {
+  margin-bottom: 58px;
+  border: 1px solid $grey-border-color;
 
   @media (min-width: $tablet-width) {
-    margin: 0 50px 64px 50px;
+    margin-bottom: 64px;
     display: flex;
     flex-direction: column;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 50px 105px 50px;
+    margin-bottom: 105px;
     display: grid;
     grid-template-columns: 1.8fr 1fr;
     grid-template-areas: "player title"

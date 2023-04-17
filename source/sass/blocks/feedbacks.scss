@@ -1,8 +1,10 @@
 .feedbacks {
-  padding: 30px 30px 51px 30px;
+  padding-top: 30px;
+  padding-bottom: 51px;
 
   @media (min-width: $tablet-width) {
-    padding: 80px 50px 47px 50px;
+    padding-top: 80px;
+    padding-bottom: 47px;
     background-image: url("../img/content/feebaks.jpg");
     background-repeat: no-repeat;
     background-position: 0 center;
@@ -15,8 +17,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 80px 0 96px 175px;
-    margin: 0 50px;
+    padding-left: 225px;
+    padding-top: 80px;
+    padding-bottom: 47px;
   }
 }
 

@@ -1,10 +1,9 @@
 .nav {
   @media (min-width: $tablet-width) {
-    padding: 0 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "logo nav-user"
-      "nav-site delivery";
+                         "nav-site delivery";
   }
 
   @media (min-width: $desktop-width) {
@@ -29,7 +28,7 @@
 .nav__logo {
   width: 86px;
   height: 35px;
-  background-image: url("../img/svg/mishka-logo-mobile.svg.svg");
+  background-image: url("../img/svg/mishka-logo-mobile.svg");
   background-repeat: no-repeat;
   background-position: center;
 
@@ -43,7 +42,7 @@
   @media (min-width: $desktop-width) {
     width: 150px;
     height: 72px;
-    background-image: url("../img/svg/mishka-logo-desktop.svg.svg");
+    background-image: url("../img/svg/mishka-logo-desktop.svg");
   }
 }
 

@@ -1,9 +1,14 @@
 .footer {
-  padding: 25px 30px;
-  background-color: #f1f1f1;
+  padding: 30px 0;
+  background-color: $title-background-color;
 
   @media (min-width: $tablet-width) {
-    padding: 51px 50px 58px 50px;
+    padding: 51px 0 58px 0;
+  }
+}
+
+.footer__wrapper {
+  @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,13 +78,13 @@
   height: 35px;
   margin: 22px auto 0 auto;
 
-  background-image: url("../img/svg/htmlacademy.svg.svg");
-  background-position: 155px center;
-  background-repeat: no-repeat;
-
   @media (min-width: $tablet-width) {
     margin: 0;
   }
+}
+
+.footer__creator-svg {
+  margin-left: 25px;
 }
 
 .footer__creator {
