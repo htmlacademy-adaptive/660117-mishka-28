@@ -2,10 +2,12 @@
   background-image: url("../img/content/intro.jpg");
   background-repeat: no-repeat;
   background-position-x: center;
+  background-position-y: -16px;
   position: relative;
 
   @media (min-width: $tablet-width) {
     background-image: url("../img/content/intro-tablet.jpg");
+    background-position-y: -45px;
 
     &::after {
       content: "";
@@ -18,24 +20,97 @@
       background-image: url("../img/svg/zigzag-fill.svg");
     }
   }
+  
+  @media (min-width: $desktop-width) {
+    background-image: url("../../img/content/intro-desktop.jpg");
+    background-position-y: -45px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/svg/zigzag-fill-desktop.svg");
+    }
+  }
+}
+
+.intro__wrapper {
+  @media (max-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .intro__title {
-  padding: 73px 0 120px 0;
+  padding: 73px 30px 120px 30px;
   margin: 0;
   font-weight: 700;
   font-size: 27px;
   line-height: 30px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 110px 30px 372px 30px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 110px 30px 355px 30px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .intro__title--inner {
   background-color: $title-background-color;
   padding: 74px 42px;
+
+  @media (min-width: $tablet-width) {
+    padding: 101px 30px 87px 30px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/svg/zigzag-fill.svg");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 101px 30px 113px 30px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/svg/zigzag-fill-desktop.svg");
+    }
+  }
 }
 
-.intro__title--catalog {
+.intro__title--form {
   margin-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 98px;
+  }
 }
 
 .intro__link {
@@ -46,23 +121,45 @@
   text-decoration: none;
   color: $white;
   padding: 24px 0 31px 30px;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 }
 
-.intro__link--interiors {
+.intro__link--interiors,
+.intro__link-container-interiors {
   background-color: $azure;
+
+  &:active {
+    background-color: $interiors-link-down;
+
+    & .intro__svg {
+      opacity: 0.3;
+    }
+  }
 }
 
-.intro__interiors-svg {
+.intro__svg--interiors {
   position: absolute;
   top: 23px;
   right: 36px;
 }
 
-.intro__link--toys {
+.intro__link--toys,
+.intro__link-container-toys {
   background-color: $dark-azure;
+
+  &:active {
+    background-color: $toys-link-down;
+
+    & .intro__svg {
+      opacity: 0.3;
+    }
+  }
 }
 
-.intro__toys-svg {
+.intro__svg--toys {
   position: absolute;
   top: 21px;
   right: 27px;
@@ -72,6 +169,13 @@
   font-size: 13px;
   line-height: 24px;
   color: $light-black;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 13px;
+  }
 
   @media (min-width: $desktop-width) {
     padding: 0 225px;

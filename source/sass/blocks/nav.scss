@@ -1,7 +1,7 @@
 .nav {
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.15fr;
     grid-template-areas: "logo nav-user"
                          "nav-site delivery";
   }
@@ -18,10 +18,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 22px 0;
+  height: 79px;
+  border-bottom: 1px solid $grey-border-color;
 
   @media (min-width: $tablet-width) {
     grid-area: logo;
+    border-bottom: none;
   }
 }
 
@@ -31,6 +33,14 @@
   background-image: url("../img/svg/mishka-logo-mobile.svg");
   background-repeat: no-repeat;
   background-position: center;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     width: 113px;
@@ -49,37 +59,91 @@
 .nav__button {
   position: absolute;
   top: 32px;
-  right: 31px;
+  right: 30px;
   border: none;
   width: 20px;
   height: 14px;
-  background-color: $white;
-  background-image: url('../img/svg/menu-open.svg');
-  background-repeat: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
   background-position: center;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
 
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
+.nav--closed .nav__button {
+  background-image: url('../img/svg/menu-open.svg');
+}
+
+.nav--opened .nav__button {
+  background-image: url('../img/svg/menu-close.svg');
+}
+
+@media (max-width: $tablet-width) {
+  .nav--closed .nav__list {
+    display: none;
+  }
+
+  .nav--opened .nav__list--site {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 79px;
+    background-color: $white;
+    min-width: 320px;
+  }
+
+  .nav--opened .nav__list--user {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 79px+158px;
+    background-color: $white;
+    min-width: 320px;
+  }
+
+  .nav-nojs .nav__button {
+    display: none
+  }
+
+  .nav-nojs .nav__list--user {
+    display: block;
+  }
+
+  .nav-nojs .nav__list--site {
+    display: block;
+  }
+}
+
+
 .nav__list {
   margin: 0;
   padding: 0;
   list-style: none;
+  width: 100%;
 }
 
 .nav__list--user {
   @media (min-width: $tablet-width) {
     display: flex;
+    align-items: center;
     grid-area: nav-user;
+    justify-content: end;
   }
 }
 
 .nav__list--site {
   @media (min-width: $tablet-width) {
     display: flex;
+    gap: 30px;
     grid-area: nav-site;
+    align-items: center;
   }
 }
 
@@ -88,18 +152,59 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
+    gap: 45px;
   }
 }
 
 .nav__item {
-  padding: 27px 0 27px 76px;
+  padding: 27px 0 27px 30px;
+  border-bottom: 1px solid $grey-border-color;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
+}
+
+.nav__item--search {
+  @media (min-width: $tablet-width) {
+    min-width: 84px;
+    border-right: 1px solid $grey-border-color;
+    border-left: 1px solid $grey-border-color;
+    padding: 35px 31px 35px 31px;
+  }
 }
 
 .nav__item--site {
+  padding-left: 76px;
+
   @media (min-width: $tablet-width) {
-    font-size: 15px;
     padding: 21px 0;
-    width: 167px;
+  }
+}
+
+.nav__item--desktop {
+  @media (min-width: $desktop-width) {
+    padding: 21px 0;
+  }
+}
+
+.nav__svg {
+  margin-right: 24px;
+}
+
+.nav__svg path {
+  opacity: 0.2;
+}
+
+.nav__svg--search {
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.nav__link-text {
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
@@ -109,6 +214,40 @@
   font-size: 17px;
   line-height: 24px;
   color: $base-black;
+
+  &:hover span {
+    opacity: 0.6;
+  }
+
+  &:hover .nav__svg path {
+    fill: $azure;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active .nav__svg path {
+    fill: $azure;
+    opacity: 0.3;
+  }
+}
+
+.nav__link--site {
+  @media (min-width: $tablet-width) {
+    font-size: 15px;
+  }
+
+    @media (min-width: $desktop-width) {
+    font-size: 17px;
+  }
+}
+
+.nav__link--desktop {
+  @media (min-width: $desktop-width) {
+    font-size: 15px;
+  }
 }
 
 .nav__delivery-offer {
@@ -121,4 +260,8 @@
     text-align: end;
     grid-area: delivery;
   }
+}
+
+.nav__list--closed {
+  display: none;
 }

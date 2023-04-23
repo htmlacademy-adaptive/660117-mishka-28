@@ -23,6 +23,7 @@
   @media (min-width: $tablet-width) {
     font-size: 43px;
     line-height: 50px;
+    margin-bottom: 12px;
   }
 
   @media (min-width: $desktop-width) {
@@ -48,4 +49,45 @@
   line-height: 20px;
   color: $base-black;
   font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+.advantages__item--ecology {
+  background-image: url("../../img/svg/ecology.svg");
+  background-repeat: no-repeat;
+  background-position: 8px 28px;
+}
+
+.advantages__item--low-price {
+  background-image: url("../../img/svg/style-price.svg");
+  background-repeat: no-repeat;
+  background-position: 0 30px;
+}
+
+.advantages__item--likes {
+  background-image: url("../../img/svg/likes.svg");
+  background-repeat: no-repeat;
+  background-position: 5px 37px;
+}
+
+.advantages__item--hand-made {
+  background-image: url("../../img/svg/with-love.svg");
+  background-repeat: no-repeat;
+  background-position: 3px 32px;
+}
+
+.advantages__item--local-product {
+  background-image: url("../../img/svg/protect-creator.svg");
+  background-repeat: no-repeat;
+  background-position: -6px 33px;
+}
+
+.advantages__item--present-box {
+  background-image: url("../../img/svg/present-box.svg");
+  background-repeat: no-repeat;
+  background-position: 3px 32px;
 }

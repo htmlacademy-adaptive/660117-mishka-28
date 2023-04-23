@@ -1,0 +1,53 @@
+.radio {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  align-items: center;
+  gap: 19px;
+
+  &:hover {
+    cursor: pointer;
+    & .radio__mark {
+      border-color: $azure;
+    }
+  }
+
+  &:active {
+    & .radio__mark {
+      border-color: $base-black-opacity;
+    }
+  }
+    
+  @media (min-width: $tablet-width) {
+    gap: 26px;
+  }
+}
+
+.radio__mark {
+  display: block;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  border: 2px solid $light-black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    height: 52px;
+    width: 52px;
+  }
+}
+
+.radio__input:checked + .radio__mark::after {
+  content: "";
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: $azure;
+
+  @media (min-width: $tablet-width) {
+    height: 22px;
+    width: 22px;
+  }
+}
