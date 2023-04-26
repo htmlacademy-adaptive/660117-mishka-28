@@ -1,8 +1,9 @@
-.intro--main {
+.intro {
   background-image: url("../img/content/intro.jpg");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: -16px;
+  background-color: $light-grey;
   position: relative;
 
   @media (min-width: $tablet-width) {
@@ -12,104 +13,72 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: -15px;
+      bottom: 0px;
       left: 0;
       right: 0;
-      width: 100%;
       height: 24px;
       background-image: url("../img/svg/zigzag-fill.svg");
+      background-position: center;
     }
   }
   
   @media (min-width: $desktop-width) {
-    background-image: url("../../img/content/intro-desktop.jpg");
+    background-image: url("../img/content/intro-desktop.jpg");
     background-position-y: -45px;
 
     &::after {
       content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 24px;
+      height: 34px;
       background-image: url("../img/svg/zigzag-fill-desktop.svg");
     }
   }
 }
 
 .intro__wrapper {
-  @media (max-width: $tablet-width) {
-    padding: 0;
+  padding: 73px 30px 0 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 110px 30px 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 110px 30px 0 30px;
   }
 }
 
 .intro__title {
-  padding: 73px 30px 120px 30px;
   margin: 0;
   font-weight: 700;
   font-size: 27px;
   line-height: 30px;
   text-align: center;
+  margin-bottom: 120px;
 
   @media (min-width: $tablet-width) {
-    padding: 110px 30px 372px 30px;
+    margin-bottom: 372px;
     font-size: 43px;
     line-height: 50px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 110px 30px 355px 30px;
+    margin-bottom: 355px;
     font-size: 53px;
     line-height: 57px;
   }
 }
 
 .intro__title--inner {
+    margin-bottom: 0;
+}
+
+.intro--inner {
+  background-image: none;
   background-color: $title-background-color;
   padding: 74px 42px;
 
   @media (min-width: $tablet-width) {
-    padding: 101px 30px 87px 30px;
+    padding: 35px 30px 87px 30px;
     position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -15px;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 24px;
-      background-image: url("../img/svg/zigzag-fill.svg");
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 101px 30px 113px 30px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 24px;
-      background-image: url("../img/svg/zigzag-fill-desktop.svg");
-    }
-  }
-}
-
-.intro__title--form {
-  margin-bottom: 17px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 54px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 98px;
   }
 }
 
@@ -124,6 +93,14 @@
 
   &:hover {
     transform: translateY(-5px);
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 51px;
   }
 }
 
@@ -174,7 +151,7 @@
   @media (min-width: $tablet-width) {
     font-size: 17px;
     line-height: 30px;
-    margin-bottom: 13px;
+    margin-bottom: 63px;
   }
 
   @media (min-width: $desktop-width) {
@@ -186,5 +163,12 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1050px;
+    margin: 0 auto;
+    padding: 0;
   }
 }

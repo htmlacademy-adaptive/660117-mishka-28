@@ -14,7 +14,7 @@
 
   &:active {
     & .radio__mark {
-      border-color: $base-black-opacity;
+      border-color: rgba($base-black, 0.1);
     }
   }
     

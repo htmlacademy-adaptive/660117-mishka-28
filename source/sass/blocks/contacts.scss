@@ -148,7 +148,7 @@
   }
 
   &:active {
-    color: $light-white;
+    color: rgba($white, 0.3);
     background-color: $light-black;
   }
 }
@@ -164,6 +164,6 @@
 
   &:active {
     color: $azure;
-    border-color: $azure-light;
+    border-color: rgba($azure, 0.1);
   }
 }

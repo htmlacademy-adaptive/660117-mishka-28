@@ -58,6 +58,7 @@
 }
  
 .input__svg-phone {
+  pointer-events: none;
   position: absolute;
   top: 11px;
   right: 7px;
@@ -68,6 +69,7 @@
 }
 
 .input__svg-email {
+  pointer-events: none;
   position: absolute;
   top: 11px;
   right: 7px;

@@ -40,6 +40,9 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-areas: "eco with-love"
+    "price protect"
+    "like present";
   }
 }
 
@@ -57,37 +60,61 @@
 }
 
 .advantages__item--ecology {
-  background-image: url("../../img/svg/ecology.svg");
+  background-image: url("../img/svg/ecology.svg");
   background-repeat: no-repeat;
   background-position: 8px 28px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: eco;
+  }
 }
 
 .advantages__item--low-price {
-  background-image: url("../../img/svg/style-price.svg");
+  background-image: url("../img/svg/style-price.svg");
   background-repeat: no-repeat;
   background-position: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: price;
+  }
 }
 
 .advantages__item--likes {
-  background-image: url("../../img/svg/likes.svg");
+  background-image: url("../img/svg/likes.svg");
   background-repeat: no-repeat;
   background-position: 5px 37px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: like;
+  }
 }
 
 .advantages__item--hand-made {
-  background-image: url("../../img/svg/with-love.svg");
+  background-image: url("../img/svg/with-love.svg");
   background-repeat: no-repeat;
   background-position: 3px 32px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: with-love;
+  }
 }
 
 .advantages__item--local-product {
-  background-image: url("../../img/svg/protect-creator.svg");
+  background-image: url("../img/svg/protect-creator.svg");
   background-repeat: no-repeat;
   background-position: -6px 33px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: protect;
+  }
 }
 
 .advantages__item--present-box {
-  background-image: url("../../img/svg/present-box.svg");
+  background-image: url("../img/svg/present-box.svg");
   background-repeat: no-repeat;
   background-position: 3px 32px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: present;
+  }
 }

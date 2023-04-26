@@ -5,7 +5,7 @@
 
   &::after {
     content: "";
-    background-image: url("../../img/svg/zigzag-line-mobile.jpg");
+    background-image: url("../img/svg/zigzag-line-mobile.jpg");
     height: 6px;
     position: absolute;
     bottom: 0;
@@ -37,7 +37,7 @@
     column-gap: 56px;
 
     &::after {
-      background-image: url("../../img/svg/zigzag-line-desktop.svg");
+      background-image: url("../img/svg/zigzag-line-desktop.svg");
       height: 22px;
     }
   }
@@ -173,7 +173,7 @@
   }
 
   &:active {
-    color: $light-white;
+    color: rgba($white, 0.3);
     background-color: $light-black;
   }
 }

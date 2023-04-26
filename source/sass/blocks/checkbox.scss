@@ -14,7 +14,7 @@
 
   &:active {
     & .checkbox__mark {
-      outline-color: $base-black-opacity;
+      outline-color: rgba($base-black, 0.1);
     }
   }
     
