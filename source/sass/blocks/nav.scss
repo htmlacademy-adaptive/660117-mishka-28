@@ -186,7 +186,9 @@
 
   @media (min-width: $tablet-width) {
     border-bottom: none;
+    max-width: 160px;
   }
+
 }
 
 .nav__item--search {
@@ -195,6 +197,12 @@
     border-right: 1px solid $grey-border-color;
     border-left: 1px solid $grey-border-color;
     padding: 35px 31px 35px 31px;
+  }
+}
+
+.nav__item--basket {
+  @media (min-width: $tablet-width) {
+    max-width: 265px;
   }
 }
 
@@ -256,6 +264,11 @@
     fill: $azure;
     opacity: 0.3;
   }
+}
+
+.nav__link-span {
+  display: inline-block;
+  max-width: 182px;
 }
 
 .nav__link--site {

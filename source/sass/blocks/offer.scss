@@ -30,11 +30,10 @@
   }
   
   @media (min-width: $desktop-width) {
-    padding-top: 54px;
+    padding-top: 115px;
     padding-bottom: 96px;
     padding-left: 225px;
-    grid-template-columns: auto 525px;
-    column-gap: 56px;
+    display: block;
 
     &::after {
       background-image: url("../img/svg/zigzag-line-desktop.svg");
@@ -56,11 +55,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    position: absolute;
-    flex-direction: row-reverse;
-    top: 61px;
-    left: -145px;
-    gap: 43px;
+    display: block;
+    margin-bottom: 32px;
   }
 }
 
@@ -94,6 +90,12 @@
     width: 100px;
     text-align: center;
   }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 123px;
+    left: 82px;
+  }
 }
 
 .offer__description-wrapper {
@@ -112,6 +114,10 @@
     margin-bottom: 40px;
     font-size: 17px;
     line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 28px;
   }
 }
 
@@ -138,6 +144,13 @@
 
   @media (min-width: $tablet-width) {
     grid-area: image;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 54px;
+    left: 575px;
+    z-index: -1;
   }
 }
 
@@ -184,12 +197,18 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 153px;
+    width: 292px;
+    margin: 0 auto 0 0;
   }
 }
 
 .offer__button-wrapper {
   @media (min-width: $tablet-width) {
     grid-area: button;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 292px;
+    margin: 0 auto 0 0;
   }
 }

@@ -1,4 +1,13 @@
 .product {
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba($base-black, 0.1)
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba($base-black, 0.1);
+  }
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -12,8 +21,9 @@
 .product__wrapper {
   padding: 28px;
   border: 1px solid $grey-border-color;
-  max-width: 260px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @media (min-width: $tablet-width) {
     padding: 27px 32px 25px 34px;

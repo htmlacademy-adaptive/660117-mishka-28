@@ -16,6 +16,7 @@
   width: 100%;
   padding: 17px 0;
   border: none;
+  background-color: transparent;
   font-size: 17px;
   line-height: 18px;
   color: $base-black;
@@ -81,10 +82,12 @@
   border: 2px solid $light-black;
   padding: 17px;
   box-shadow: none;
+  resize: none;
 
   &:hover {
     cursor: pointer;
     border: 2px solid $azure;
+    border-bottom: none;
   }
 
   &:focus-visible {

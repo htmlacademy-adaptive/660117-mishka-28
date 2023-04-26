@@ -44,10 +44,16 @@
 
 .form__container--background-mode {
   @media (min-width: $tablet-width) {
-    background-color: $title-background-color;
-
-    & .input__field {
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 200vw;
       background-color: $title-background-color;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
     }
   }
 }
