@@ -1,0 +1,11 @@
+.header {
+  overflow: hidden;
+  
+  @media (min-width: $tablet-width) {
+    background-color: $light-grey;
+
+    &--inner {
+      background-color: $title-background-color;
+    }
+  }
+}

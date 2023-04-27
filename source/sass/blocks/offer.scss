@@ -1,6 +1,17 @@
 .offer {
+  position: relative;
   padding-top: 30px;
   padding-bottom: 42px;
+
+  &::after {
+    content: "";
+    background-image: url("../img/svg/zigzag-line-mobile.jpg");
+    height: 6px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -11,15 +22,23 @@
     padding-top: 42px;
     padding-bottom: 70px;
     column-gap: 42px;
+
+    &::after {
+      background-image: url("../img/svg/zigzag-line-tablet.svg");
+      height: 17px;
+    }
   }
   
   @media (min-width: $desktop-width) {
-    padding-top: 54px;
+    padding-top: 115px;
     padding-bottom: 96px;
     padding-left: 225px;
-    grid-template-columns: auto 525px;
-    column-gap: 56px;
-    position: relative;
+    display: block;
+
+    &::after {
+      background-image: url("../img/svg/zigzag-line-desktop.svg");
+      height: 22px;
+    }
   }
 }
 
@@ -31,13 +50,13 @@
     grid-area: title;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
   }
 
   @media (min-width: $desktop-width) {
-    position: absolute;
-    flex-direction: row-reverse;
-    top: 61px;
-    left: -168px;
+    display: block;
+    margin-bottom: 32px;
   }
 }
 
@@ -65,6 +84,18 @@
   line-height: 20px;
   color: $azure;
   order: 2;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 100px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 123px;
+    left: 82px;
+  }
 }
 
 .offer__description-wrapper {
@@ -78,12 +109,30 @@
   margin: 0 0 28px 0;
   font-size: 15px;
   line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 28px;
+  }
 }
 
 .offer__description-list {
   margin: 0 0 28px 0;
   font-size: 15px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 109px;
+  }
 }
 
 .offer__value {
@@ -96,6 +145,13 @@
   @media (min-width: $tablet-width) {
     grid-area: image;
   }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 54px;
+    left: 575px;
+    z-index: -1;
+  }
 }
 
 .offer__price {
@@ -105,6 +161,10 @@
   line-height: 24px;
   text-align: center;
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 33px;
+  }
 }
 
 .offer__link {
@@ -118,6 +178,17 @@
   text-transform: uppercase;
   display: block;
   max-width: 292px;
+  margin: 0 auto;
+
+  &:hover {
+    color: $white;
+    background-color: $light-black;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+    background-color: $light-black;
+  }
 }
 
 .offer__content-wrapper {
@@ -126,12 +197,18 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 153px;
+    width: 292px;
+    margin: 0 auto 0 0;
   }
 }
 
 .offer__button-wrapper {
   @media (min-width: $tablet-width) {
     grid-area: button;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 292px;
+    margin: 0 auto 0 0;
   }
 }

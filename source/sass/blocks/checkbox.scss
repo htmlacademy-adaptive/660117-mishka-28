@@ -1,0 +1,57 @@
+.checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  align-items: center;
+  gap: 19px;
+
+  &:hover {
+    cursor: pointer;
+    & .checkbox__mark {
+      outline-color: $azure;
+    }
+  }
+
+  &:active {
+    & .checkbox__mark {
+      outline-color: rgba($base-black, 0.1);
+    }
+  }
+    
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+  }
+}
+
+.checkbox__mark {
+  display: block;
+  height: 38px;
+  width: 38px;
+  outline: 2px solid $light-black;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    height: 52px;
+    width: 52px;
+  }
+}
+
+.checkbox__input:checked + .checkbox__mark::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: 8px;
+  height: 16px;
+  width: 23px;
+  background-image: url("../img/svg/checkbox-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  @media (min-width: $tablet-width) {
+    top: 16px;
+    right: 10px;
+    height: 22px;
+    width: 31px;
+    background-image: url("../img/svg/checkbox-active-tablet.svg");
+  }
+}
