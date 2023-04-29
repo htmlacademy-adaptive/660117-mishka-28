@@ -119,10 +119,20 @@
   align-items: center;
   justify-content: center;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/video-picture-mobile-2x.jpg");
+    background-size: auto 150px;
+  }
+
   @media (min-width: $tablet-width) {
     order: 1;
     background-image: url("../img/background/video-tablet.jpg");
     height: 455px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/video-tablet-2x.jpg");
+      background-size: auto 455px;
+    }
   }
 
   @media (min-width: $desktop-width) {
