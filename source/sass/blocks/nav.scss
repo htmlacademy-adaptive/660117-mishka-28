@@ -222,9 +222,6 @@
 
 .nav__svg {
   margin-right: 24px;
-}
-
-.nav__svg path {
   opacity: 0.2;
 }
 
@@ -251,7 +248,7 @@
     opacity: 0.6;
   }
 
-  &:hover .nav__svg path {
+  &:hover .nav__svg {
     fill: $azure;
     opacity: 1;
   }
@@ -260,7 +257,7 @@
     opacity: 0.3;
   }
 
-  &:active .nav__svg path {
+  &:active .nav__svg{
     fill: $azure;
     opacity: 0.3;
   }
