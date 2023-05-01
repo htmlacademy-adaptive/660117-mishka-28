@@ -92,5 +92,6 @@
 
   &:focus-visible {
     border: 2px solid $dark-azure;
+    border-bottom: none;
   }
 }
