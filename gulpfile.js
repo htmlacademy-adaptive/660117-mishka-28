@@ -38,7 +38,7 @@ const html = () => {
 
 //Scripts
 
-export const scripts = () => {
+const scripts = () => {
   return gulp.src('source/js/*.js')
   .pipe(terser())
   .pipe(gulp.dest('build/js'));
@@ -49,6 +49,11 @@ export const scripts = () => {
 const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(libsquoosh())
+  .pipe(gulp.dest('build/img'));
+}
+
+const copyImages = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(gulp.dest('build/img'));
 }
 
@@ -64,15 +69,14 @@ const webp = () => {
 
 //SVG
 
-export const optimizeSvg = () => {
+const optimizeSvg = () => {
   return gulp.src('source/img/svg/*.svg')
   .pipe(svgmin())
-  .pipe(gulp.dest('build/img'));
+  .pipe(gulp.dest('build/img/svg'));
 }
 
-export const sprite = () => {
+const sprite = () => {
   return gulp.src('source/img/svg/inline-svg/*.svg')
-  .pipe(svgmin())
   .pipe(svgstore({
     inlineSvg: true
   }))
@@ -82,7 +86,7 @@ export const sprite = () => {
 
 //Copy
 
-export const copy = (done) => {
+const copy = (done) => {
   gulp.src([
   'source/fonts/*.{woff,woff2}',
   'source/*.ico',
@@ -96,16 +100,16 @@ export const copy = (done) => {
 
 //Clean
 
-export const clean = () => {
+const clean = () => {
   return deleteAsync('build');
   };
 
 // Server
 
-const server = (done) => {
+export const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -121,7 +125,38 @@ const watcher = () => {
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
+//Build
 
-export default gulp.series(
-  html,styles, server, watcher
-);
+export const build = gulp.series (
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    optimizeSvg,
+    sprite,
+    webp
+  ),
+)
+
+//Start
+
+export const start = gulp.series (
+  clean,
+  copy,
+  copyImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    optimizeSvg,
+    sprite,
+    webp
+  ),gulp.series (
+    server,
+    watcher
+  )
+)
+
