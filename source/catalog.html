@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>HTML Academy: Мишка</title>
 </head>
 
@@ -45,7 +45,7 @@
           <li class="nav__item nav__item--basket">
             <a class="nav__link" href="#">
               <svg class="nav__svg" width="21" height="18">
-                <use href="sprite.svg#nav-basket"></use>
+                <use href="sprite.svg#cart"></use>
               </svg>
               <span class="nav__link-span">Корзина: пока пуста</span></a>
           </li>
@@ -73,9 +73,15 @@
       <ul class="catalog__list">
         <li class="catalog__item product">
           <picture>
+            <source media="(min-width: 1150px)" type="image/webp"
+              srcset="img/content/catalog-bunny-desktop.webp 1x, img/content/catalog-bunny-desktop-2x.webp 2x"
+              width="316" height="462">
             <source media="(min-width: 1150px)"
               srcset="img/content/catalog-bunny-desktop.jpg 1x, img/content/catalog-bunny-desktop-2x.jpg 2x" width="316"
               height="462">
+            <source media="(min-width: 768px)" type="image/webp"
+              srcset="img/content/catalog-bunny-tablet.webp 1x, img/content/catalog-bunny-tablet-2x.webp 2x" width="334"
+              height="334">
             <source media="(min-width: 768px)"
               srcset="img/content/catalog-bunny-tablet.jpg 1x, img/content/catalog-bunny-tablet-2x.jpg 2x" width="334"
               height="334">
@@ -91,7 +97,7 @@
               <span class="product__price">1 200 руб.</span>
               <button class="product__button" type="button">
                 <svg class="product__svg" width="21" height="18">
-                  <use href="sprite.svg#product-cart"></use>
+                  <use href="sprite.svg#cart"></use>
                 </svg>
                 <span class="visually-hidden">Положить в корзину.</span>
               </button>
@@ -100,9 +106,15 @@
         </li>
         <li class="catalog__item product">
           <picture>
+            <source media="(min-width: 1150px)" type="image/webp"
+              srcset="img/content/catalog-baket-desktop.webp 1x, img/content/catalog-baket-desktop-2x.webp 2x"
+              width="316" height="462">
             <source media="(min-width: 1150px)"
               srcset="img/content/catalog-baket-desktop.jpg 1x, img/content/catalog-baket-desktop-2x.jpg 2x" width="316"
               height="462">
+            <source media="(min-width: 768px)" type="image/webp"
+              srcset="img/content/catalog-baket-tablet.webp 1x, img/content/catalog-baket-tablet-2x.webp 2x" width="334"
+              height="334">
             <source media="(min-width: 768px)"
               srcset="img/content/catalog-baket-tablet.jpg 1x, img/content/catalog-baket-tablet-2x.jpg 2x" width="334"
               height="334">
@@ -118,7 +130,7 @@
               <span class="product__price">690 руб.</span>
               <button class="product__button" type="button">
                 <svg class="product__svg" width="21" height="18">
-                  <use href="sprite.svg#product-cart"></use>
+                  <use href="sprite.svg#cart"></use>
                 </svg>
                 <span class="visually-hidden">Положить в корзину.</span>
               </button>
@@ -127,11 +139,15 @@
         </li>
         <li class="catalog__item product">
           <picture>
-            <source media="(min-width: 1150px)" type="image/webp" srcset="img/content/catalog-big-baket-desktop.webp"
+            <source media="(min-width: 1150px)" type="image/webp"
+              srcset="img/content/catalog-big-baket-desktop.webp 1x, img/content/catalog-big-baket-desktop-2x.webp 2x"
               width="316" height="462">
             <source media="(min-width: 1150px)"
               srcset="img/content/catalog-big-baket-desktop.jpg 1x, img/content/catalog-big-baket-desktop-2x.jpg 2x"
               width="316" height="462">
+            <source media="(min-width: 768px)" type="image/webp"
+              srcset="img/content/catalog-big-baket-tablet.webp 1x, img/content/catalog-big-baket-tablet-2x.webp 2x"
+              width="334" height="334">
             <source media="(min-width: 768px)"
               srcset="img/content/catalog-big-baket-tablet.jpg 1x, img/content/catalog-big-baket-tablet-2x.jpg 2x"
               width="334" height="334">
@@ -148,7 +164,7 @@
               <span class="product__price">1 500 руб.</span>
               <button class="product__button" type="button">
                 <svg class="product__svg" width="21" height="18">
-                  <use href="sprite.svg#product-cart"></use>
+                  <use href="sprite.svg#cart"></use>
                 </svg>
                 <span class="visually-hidden">Положить в корзину.</span>
               </button>

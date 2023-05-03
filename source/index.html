@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png">
   <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>HTML Academy: Мишка</title>
 </head>
 
@@ -50,7 +50,7 @@
           <li class="nav__item nav__item--basket">
             <a class="nav__link" href="#">
               <svg class="nav__svg" width="21" height="18">
-                <use href="sprite.svg#nav-basket"></use>
+                <use href="sprite.svg#cart"></use>
               </svg>
               <span class="nav__link-span">Корзина: пока пуста</span></a>
           </li>
@@ -115,9 +115,15 @@
         </dl>
       </div>
       <picture>
+        <source media="(min-width: 1150px)" type="image/webp"
+          srcset="img/content/offer-baskets-desktop.webp 1x, img/content/offer-baskets-desktop-2x.webp 2x" width="525"
+          height="636">
         <source media="(min-width: 1150px)"
-        srcset="img/content/offer-baskets-desktop.jpg 1x, img/content/offer-baskets-desktop-2x.jpg 2x" width="525"
-        height="636">
+          srcset="img/content/offer-baskets-desktop.jpg 1x, img/content/offer-baskets-desktop-2x.jpg 2x" width="525"
+          height="636">
+        <source media="(min-width: 768px)" type="image/webp"
+          srcset="img/content/offer-baskets-tablet.webp 1x, img/content/offer-baskets-tablet-2x.webp 2x" width="334"
+          height="404">
         <source media="(min-width: 768px)"
           srcset="img/content/offer-baskets-tablet.jpg 1x, img/content/offer-baskets-tablet-2x.jpg 2x" width="334"
           height="404">
