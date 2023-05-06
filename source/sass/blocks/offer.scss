@@ -1,16 +1,19 @@
 .offer {
   position: relative;
+
   padding-top: 30px;
   padding-bottom: 42px;
 
   &::after {
     content: "";
-    background-image: url("../img/svg/zigzag-line-mobile.jpg");
-    height: 6px;
     position: absolute;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
+
+    height: 6px;
+
+    background-image: url("../img/svg/zigzag-line-mobile.jpg");
   }
 
   @media (min-width: $tablet-width) {
@@ -18,19 +21,21 @@
     padding-bottom: 70px;
 
     &::after {
-      background-image: url("../img/svg/zigzag-line-tablet.svg");
       height: 17px;
+
+      background-image: url("../img/svg/zigzag-line-tablet.svg");
     }
   }
-  
+
   @media (min-width: $desktop-width) {
     padding-top: 115px;
     padding-bottom: 96px;
     padding-left: 225px;
 
     &::after {
-      background-image: url("../img/svg/zigzag-line-desktop.svg");
       height: 22px;
+
+      background-image: url("../img/svg/zigzag-line-desktop.svg");
     }
   }
 }
@@ -40,11 +45,12 @@
   flex-direction: column;
 
   @media (min-width: $tablet-width) {
-    grid-area: title;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 37px;
+
+    grid-area: title;
   }
 
   @media (min-width: $desktop-width) {
@@ -55,6 +61,7 @@
 
 .offer__product-title {
   margin: 0;
+
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
@@ -71,16 +78,19 @@
 }
 
 .offer__product-label {
+  order: 2;
   margin: 0 0 17px 0;
+
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
   color: $azure;
-  order: 2;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    width: 120px;
     margin: 0;
-    width: 100px;
+
     text-align: center;
   }
 
@@ -93,29 +103,34 @@
 
 .offer__description-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1.6fr;
-  padding: 13px 0;
+  padding: 10px 0;
+
   border-bottom: 1px solid $grey-border-color;
+
+  grid-template-columns: 1fr 1.6fr;
 }
 
 .offer__description {
-  margin: 0 0 28px 0;
+  margin: 0 0 15px 0;
+
   font-size: 15px;
   line-height: 24px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 35px;
+
     font-size: 17px;
     line-height: 30px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 28px;
+    margin-bottom: 48px;
   }
 }
 
 .offer__description-list {
   margin: 0 0 28px 0;
+
   font-size: 15px;
   line-height: 20px;
 
@@ -133,17 +148,18 @@
 }
 
 .offer__picture {
-  margin-bottom: 25px;
   width: 100%;
   height: 100%;
+  margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
     position: absolute;
     top: 140px;
     right: 50px;
-    margin: 0;
+
     width: fit-content;
     height: fit-content;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -156,37 +172,43 @@
 
 .offer__price {
   display: block;
+  margin-bottom: 25px;
+
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   text-align: center;
-  margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 33px;
+    font-size: 20px;
   }
 }
 
 .offer__link {
-  font-size: 18px;
-  line-height: 18px;
-  color: $light-black;
-  font-weight: 700;
-  padding: 16px;
-  border: 2px solid $light-black;
-  text-align: center;
-  text-transform: uppercase;
   display: block;
   max-width: 292px;
   margin: 0 auto;
+  padding: 16px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: $light-black;
+  text-transform: uppercase;
+
+  border: 2px solid $light-black;
 
   &:hover {
     color: $white;
+
     background-color: $light-black;
   }
 
   &:active {
     color: rgba($white, 0.3);
+
     background-color: $light-black;
   }
 }
