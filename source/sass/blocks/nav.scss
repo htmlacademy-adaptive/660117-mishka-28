@@ -1,17 +1,26 @@
 .nav {
+  &--nojs {
+    & .nav__list--site {
+      position: static;
+    }
+
+    & .nav__list--user {
+      position: static;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     display: grid;
+
+    grid-template-areas: "logo nav-user"
+    "nav-site delivery";
     grid-template-columns: 1fr 1.15fr;
-    grid-template-areas:
-      "logo nav-user"
-      "nav-site delivery";
   }
 
   @media (min-width: $desktop-width) {
+    grid-template-areas: "nav-site logo nav-user"
+    "nav-desktop . delivery";
     grid-template-columns: 1fr 150px 1fr;
-    grid-template-areas:
-      "nav-site logo nav-user"
-      "nav-desktop . delivery";
   }
 }
 
@@ -23,16 +32,20 @@
 
 .nav__container {
   position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
   height: 79px;
+
   border-bottom: 1px solid $grey-border-color;
 
   @media (min-width: $tablet-width) {
-    grid-area: logo;
-    border-bottom: none;
     z-index: 2;
+
+    border-bottom: none;
+
+    grid-area: logo;
   }
 }
 
@@ -65,12 +78,14 @@
   position: absolute;
   top: 32px;
   right: 35px;
-  border: none;
+
   width: 20px;
   height: 14px;
+
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
+  border: none;
 
   &:hover {
     cursor: pointer;
@@ -96,64 +111,75 @@
   }
 
   .nav--opened .nav__list--site {
-    display: block;
     position: absolute;
-    z-index: 1;
     top: 79px;
-    background-color: $white;
+    z-index: 1;
+
+    display: block;
     min-width: 320px;
+
+    background-color: $white;
   }
 
   .nav--opened .nav__list--user {
-    display: block;
     position: absolute;
-    z-index: 1;
     top: 237px;
-    background-color: $white;
+    z-index: 1;
+
+    display: block;
     min-width: 320px;
+
+    background-color: $white;
   }
 
-  .nav-nojs .nav__button {
+  .nav--nojs .nav__button {
     display: none;
   }
 
-  .nav-nojs .nav__list--user {
+  .nav--nojs .nav__list--user {
     display: block;
+    position: static;
   }
 
-  .nav-nojs .nav__list--site {
+  .nav--nojs .nav__list--site {
     display: block;
+    position: static;
   }
 }
 
 .nav__list {
+  width: 100%;
   margin: 0;
   padding: 0;
+
   list-style: none;
-  width: 100%;
 }
 
 .nav__list--user {
   @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    grid-area: nav-user;
-    justify-content: end;
     position: relative;
     z-index: 1;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
+
+    grid-area: nav-user;
 
     &::before {
       content: "";
       position: absolute;
-      height: 100%;
-      width: 200vw;
-      background-color: $white;
       top: 0;
       left: 50%;
-      transform: translateX(-50%);
       z-index: -1;
+
+      width: 200vw;
+      height: 100%;
+
+      background-color: $white;
       border-bottom: 1px solid $grey-border-color;
+      transform: translateX(-50%);
     }
   }
 }
@@ -162,14 +188,15 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    gap: 36px;
-
-    grid-area: nav-site;
     align-items: center;
+
+    gap: 0 27px;
+    grid-area: nav-site;
   }
 
   @media (min-width: $desktop-width) {
     z-index: 2;
+
     gap: 0;
   }
 }
@@ -180,31 +207,36 @@
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
+
     gap: 10px 60px;
   }
 }
 
 .nav__item {
   padding: 27px 0 27px 30px;
+
   border-bottom: 1px solid $grey-border-color;
 
   @media (min-width: $tablet-width) {
-    border-bottom: none;
     max-width: 250px;
+
+    border-bottom: none;
   }
 }
 
 .nav__item--search {
   @media (min-width: $tablet-width) {
     min-width: 84px;
-    border-left: 1px solid $grey-border-color;
     padding: 30px 31px;
+
+    border-left: 1px solid $grey-border-color;
   }
 }
 
 .nav__item--basket {
   @media (min-width: $tablet-width) {
     max-width: 265px;
+
     border-left: 1px solid $grey-border-color;
   }
 }
@@ -218,6 +250,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 29px 35px;
+
     border-right: 1px solid $grey-border-color;
 
     &:nth-child(odd) {
@@ -238,6 +271,7 @@
 
 .nav__svg {
   margin-right: 24px;
+
   opacity: 0.2;
 }
 
@@ -254,10 +288,10 @@
 }
 
 .nav__link {
-  font-family: inherit;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+  font-family: inherit;
   color: $base-black;
 
   &:hover span {
@@ -265,8 +299,9 @@
   }
 
   &:hover .nav__svg {
-    fill: $azure;
     opacity: 1;
+
+    fill: $azure;
   }
 
   &:active {
@@ -274,8 +309,9 @@
   }
 
   &:active .nav__svg {
-    fill: $azure;
     opacity: 0.3;
+
+    fill: $azure;
   }
 }
 
@@ -301,13 +337,16 @@
 }
 
 .nav__delivery-offer {
-  color: $light-black;
-  padding: 21px 0;
   display: none;
+  padding: 21px 0;
+
+  color: $light-black;
 
   @media (min-width: $tablet-width) {
     display: block;
+
     text-align: end;
+
     grid-area: delivery;
   }
 }

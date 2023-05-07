@@ -132,7 +132,7 @@ export const build = gulp.series(
   clean,
   copy,
   optimizeImages,
-  gulp.parallel(styles, html, scripts, optimizeSvg, sprite, webp)
+  gulp.parallel(styles, html, scripts, optimizeSvg, sprite, webp),
 );
 
 //Start
