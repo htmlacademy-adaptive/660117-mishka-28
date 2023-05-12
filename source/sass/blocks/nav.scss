@@ -12,20 +12,22 @@
   @media (min-width: $tablet-width) {
     display: grid;
 
-    grid-template-areas: "logo nav-user"
-    "nav-site delivery";
+    grid-template-areas:
+      "logo nav-user"
+      "nav-site delivery";
     grid-template-columns: 1fr 1.15fr;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-areas: "nav-site logo nav-user"
-    "nav-desktop . delivery";
+    grid-template-areas:
+      "nav-site logo nav-user"
+      "nav-desktop . delivery";
     grid-template-columns: 1fr 150px 1fr;
   }
 }
 
 .header__wrapper {
-  @media (max-width: $tablet-width) {
+  @media (max-width: ($tablet-width - 1px)) {
     padding: 0;
   }
 }

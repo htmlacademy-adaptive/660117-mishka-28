@@ -3,6 +3,14 @@
 
   border: 1px solid $grey-border-color;
 
+  &:hover {
+    box-shadow: 0 6px 10px rgb($base-black, 10%);
+  }
+
+  &:active {
+    box-shadow: 0 3px 10px rgb($base-black, 10%);
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
