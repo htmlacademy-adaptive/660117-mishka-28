@@ -1,9 +1,11 @@
 .form__container {
   position: relative;
 
+  padding-bottom: 30px;
+
   border: none;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: ($tablet-width - 1px)) {
     &::after {
       content: "";
       position: absolute;
@@ -26,10 +28,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    position: relative;
+    grid-template-columns: 125px 700px;
 
-    display: block;
-    padding: 50px 225px;
+    padding: 50px 225px 50px 100px;
   }
 }
 
@@ -79,6 +80,8 @@
   margin: 0 0 30px 0;
   padding: 0;
 
+  max-width: 60px;
+
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;
@@ -87,11 +90,6 @@
 
   @media (min-width: $tablet-width) {
     margin: 20px 0 0 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    position: absolute;
-    left: 111px;
   }
 }
 
@@ -107,14 +105,9 @@
 .form__list {
   display: grid;
   margin: 0;
-  margin-bottom: 30px;
   padding: 0;
 
   list-style: none;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 0;
-  }
 }
 
 .form__list--type {
@@ -141,6 +134,10 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 19px;
@@ -199,6 +196,7 @@
 .form__button-wrapper {
   @media (min-width: $tablet-width) {
     display: flex;
+    gap: 30px;
     flex-direction: row-reverse;
     justify-content: space-between;
   }

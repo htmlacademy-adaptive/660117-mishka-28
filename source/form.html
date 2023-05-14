@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" href="./fonts/opensans.woff2" as="fonts">
-  <link rel="preload" href="./fonts/opensansbold.woff2" as="fonts">
+  <link rel="preload" href="./fonts/opensans.woff2" as="font" crossorigin="anonymous" >
+  <link rel="preload" href="./fonts/opensansbold.woff2" as="font" crossorigin="anonymous" >
   <link rel="stylesheet" href="css/style.min.css">
   <title>HTML Academy: Мишка</title>
 </head>
@@ -168,40 +168,28 @@
         </fieldset>
         <fieldset class="form__container  form__container--background-mode form__container--phone container">
           <h3 class="form__title form__title--tel">Тел</h3>
-          <ul class="form__list form__list--phone">
-            <li class="form__list-item">
               <label class="form__label input input--phone">
                 <input class="input__field" type="tel" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
                 <svg class="input__svg-phone" width="25" height="24">
                   <use href="img/sprite.svg#form-phone"></use>
                 </svg>
               </label>
-            </li>
-          </ul>
         </fieldset>
         <fieldset class="form__container  form__container--background-mode form__container--email container">
           <h3 class="form__title form__title--email">E-mail</h3>
-          <ul class="form__list form__list--email">
-            <li class="form__list-item">
               <label class="form__label input input--email">
                 <input class="input__field" type="email" name="email" placeholder="Ваш Email*" required>
                 <svg class="input__svg-email" width="32" height="21">
                   <use href="img/sprite.svg#form-email"></use>
                 </svg>
               </label>
-            </li>
-          </ul>
         </fieldset>
         <fieldset class="form__container container">
           <h3 class="form__title form__title--add">Доп</h3>
-          <ul class="form__list form__list--add">
-            <li class="form__list-item">
               <label class="form__label input input--add">
                 <textarea class="input__field input__field--add"
                   placeholder="Опишите все ваши пожелания к заказу"></textarea>
               </label>
-            </li>
-          </ul>
         </fieldset>
         <div class="form__button-wrapper container">
           <p class="form__notice">*Поля обязательны для заполнения</p>
