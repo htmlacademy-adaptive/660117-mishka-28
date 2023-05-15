@@ -296,6 +296,9 @@
   font-family: inherit;
   color: $base-black;
 
+  display: flex;
+  align-items: center;
+
   &:hover span {
     opacity: 0.6;
   }
