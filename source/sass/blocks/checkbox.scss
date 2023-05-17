@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: row-reverse;
   justify-content: start;
-  align-items: center;
 
   gap: 19px;
 
@@ -64,4 +63,12 @@
 
     background-image: url("../img/svg/checkbox-active-tablet.svg");
   }
+}
+
+.checkbox__input:focus-visible + .checkbox__mark {
+  box-shadow: 0 0 0 5px $light-black;
+}
+
+.checkbox__text {
+  padding: 16px 0;
 }

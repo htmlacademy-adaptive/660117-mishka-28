@@ -26,12 +26,6 @@
   }
 }
 
-.header__wrapper {
-  @media (max-width: ($tablet-width - 1px)) {
-    padding: 0;
-  }
-}
-
 .nav__container {
   position: relative;
 
@@ -78,11 +72,11 @@
 
 .nav__button {
   position: absolute;
-  top: 32px;
-  right: 35px;
+  top: 30px;
+  right: 30px;
 
   width: 20px;
-  height: 14px;
+  height: 20px;
 
   background-color: transparent;
   background-repeat: no-repeat;
@@ -314,8 +308,6 @@
   }
 
   &:active .nav__svg {
-    opacity: 0.3;
-
     fill: $azure;
   }
 }

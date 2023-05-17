@@ -8,6 +8,7 @@
 }
 
 .input__field::placeholder {
+  opacity: 1;
   color: rgba($base-black, 0.3);
 }
 
@@ -69,7 +70,8 @@
 
 .input__svg-phone {
   position: absolute;
-  top: 11px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 7px;
 
   pointer-events: none;
@@ -89,7 +91,8 @@
 
 .input__svg-email {
   position: absolute;
-  top: 11px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 7px;
   z-index: 2;
 
