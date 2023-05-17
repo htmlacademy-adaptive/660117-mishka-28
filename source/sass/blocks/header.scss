@@ -9,3 +9,9 @@
     }
   }
 }
+
+.header__wrapper {
+  @media (max-width: ($tablet-width - 1px)) {
+    padding: 0;
+  }
+}

@@ -126,6 +126,11 @@
   }
 }
 
+.form__list-item {
+  display: flex;
+  align-self: self-start;
+}
+
 .form__list--name {
   gap: 23px;
 }
