@@ -1,0 +1,78 @@
+.modal-form__fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 0 31px 0;
+  padding: 0;
+
+  border: none;
+
+  gap: 7px;
+}
+
+.modal-form__description {
+  display: block;
+  margin: 0 0 20px 0;
+
+  line-height: 30px;
+  text-align: center;
+}
+
+.modal-form__size {
+  display: block;
+  min-width: 82px;
+  padding: 18px 22px;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+
+  border: 2px solid rgba($light-black, 0.1);
+
+  &:hover {
+    border: 2px solid rgba($light-black, 0.3);
+    cursor: pointer;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 112px;
+  }
+}
+
+.modal-form__radio:checked + .modal-form__size {
+  border: 2px solid $azure;
+}
+
+.modal-form__button {
+  display: block;
+  min-width: 260px;
+  margin: 0 auto;
+  padding: 16px;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  text-align: center;
+  color: $white;
+  text-transform: uppercase;
+
+  background-color: $azure;
+  border: none;
+
+  &:hover {
+    background-color: lighten($azure, 5%);
+    cursor: pointer;
+  }
+
+  &:active {
+    color: rgba($white, 0.5);
+
+    cursor: pointer;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 350px;
+  }
+}

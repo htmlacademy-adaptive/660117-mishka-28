@@ -1,0 +1,1 @@
+const modalWindow=document.querySelector(".modal-window"),openButton=document.querySelector(".modal-button");openButton.addEventListener("click",(()=>modalWindow.classList.add("modal-window--opened"))),modalWindow.addEventListener("click",(o=>{o.target.closest(".modal-window__container")||modalWindow.classList.remove("modal-window--opened")}));

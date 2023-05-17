@@ -1,59 +1,76 @@
 .video__container {
   margin-bottom: 58px;
+
   border: 1px solid $grey-border-color;
 
+  &:hover {
+    box-shadow: 0 6px 10px rgb($base-black, 10%);
+  }
+
+  &:active {
+    box-shadow: 0 3px 10px rgb($base-black, 10%);
+  }
+
   @media (min-width: $tablet-width) {
-    margin-bottom: 64px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 64px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 105px;
     display: grid;
-    grid-template-columns: 1.8fr 1fr;
-    grid-template-areas: "player title"
+    margin-bottom: 105px;
+
+    grid-template-areas:
+      "player title"
       "player content";
+    grid-template-columns: 1.87fr 1fr;
   }
 }
 
 .video__title {
-  font-size: 17px;
-  line-height: 24px;
-  font-weight: 700;
-  margin: 21px 13px 26px 93px;
   position: relative;
+
   display: flex;
   align-items: center;
   min-height: 48px;
+  margin: 21px 13px 26px 93px;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
 
   @media (min-width: $tablet-width) {
-    margin: 42px 13px 24px 107px;
-    font-size: 20px;
     order: 2;
     min-height: fit-content;
+    margin: 42px 13px 24px 107px;
+
+    font-size: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-area: title;
-    margin: 96px 110px 26px 80px;
     min-height: 0;
+    margin: 96px 110px 26px 80px;
+
+    grid-area: title;
   }
 
   &::after {
     content: "";
-    width: 32px;
-    height: 22px;
-    background-image: url("../img/svg/video-icon.svg");
     position: absolute;
     top: 10px;
     left: -57px;
+
+    width: 32px;
+    height: 22px;
+
+    background-image: url("../img/svg/video-icon.svg");
 
     @media (min-width: $tablet-width) {
       top: -1px;
       left: -65px;
     }
-  
+
     @media (min-width: $desktop-width) {
       top: -49px;
       left: 0;
@@ -70,54 +87,66 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-area: content;
     padding: 0 57px 60px 80px;
+
+    grid-area: content;
   }
 }
 
 .video__description {
-  font-size: 13px;
-  line-height: 24px;
   margin: 0 0 41px 0;
   padding: 0;
+
+  font-size: 13px;
+  line-height: 24px;
 
   @media (min-width: $tablet-width) {
     font-size: 15px;
     line-height: 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 52px 0;
+  }
 }
 
 .video__link {
-  font-size: 18px;
-  line-height: 16px;
-  color: $light-black;
-  font-weight: 700;
-  border: 2px solid $light-black;
-  text-align: center;
-  text-transform: uppercase;
   display: block;
   padding: 16px 0;
 
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+  text-align: center;
+  color: $light-black;
+  text-transform: uppercase;
+
+  border: 2px solid $light-black;
+
   &:hover {
     color: $white;
+
     background-color: $light-black;
   }
 
   &:active {
     color: rgba($white, 0.3);
+
     background-color: $light-black;
   }
 }
 
 .video__player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+
   background-image: url("../img/background/video-picture-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  width: 100%;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/background/video-picture-mobile-2x.jpg");
@@ -126,8 +155,9 @@
 
   @media (min-width: $tablet-width) {
     order: 1;
-    background-image: url("../img/background/video-tablet.jpg");
     height: 455px;
+
+    background-image: url("../img/background/video-tablet.jpg");
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/video-tablet-2x.jpg");
@@ -141,13 +171,14 @@
 }
 
 .video__button {
-  border: none;
-  background-color: transparent;
-  background-image: url("../img/svg/video-play-button.svg");
-  background-position: center;
-  background-repeat: no-repeat;
   width: 101px;
   height: 77px;
+
+  background-color: transparent;
+  background-image: url("../img/svg/video-play-button.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
 
   &:hover {
     transform: scale(120%);

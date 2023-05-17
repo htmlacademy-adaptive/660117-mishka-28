@@ -1,5 +1,6 @@
 .footer {
   padding: 30px 0;
+
   background-color: $title-background-color;
 
   @media (min-width: $tablet-width) {
@@ -16,17 +17,18 @@
 }
 
 .footer__mishka-link {
+  display: none;
   width: 102px;
   height: 34px;
-  display: none;
 
   &:hover svg {
     fill: $toys-link-down;
   }
 
   &:active svg {
-    fill: $toys-link-down;
     opacity: 0.3;
+
+    fill: $toys-link-down;
   }
 
   @media (min-width: $tablet-width) {
@@ -35,17 +37,24 @@
 }
 
 .footer__contacts-list {
-  margin: 0;
-  padding: 0 0 28px 0;
-  list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 29px;
+  margin: 0 30px;
+  padding: 0 0 28px 0;
+
+  list-style: none;
+
   border-bottom: 1px solid $dark-grey;
+
+  gap: 29px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
     padding: 0;
+
+    max-width: 300px;
+
     border-bottom: none;
   }
 }
@@ -54,14 +63,15 @@
   display: block;
   width: 28px;
   height: 22px;
-  
+
   &:hover svg {
     fill: $toys-link-down;
   }
 
   &:active svg {
-    fill: $toys-link-down;
     opacity: 0.3;
+
+    fill: $toys-link-down;
   }
 }
 
@@ -81,10 +91,10 @@
   }
 
   &:active svg {
-    fill: $toys-link-down;
     opacity: 0.3;
-  }
 
+    fill: $toys-link-down;
+  }
 
   @media (min-width: $tablet-width) {
     margin: 0;
@@ -93,11 +103,12 @@
 
 .footer__creator-svg {
   margin-left: 25px;
+  flex-shrink: 0;
 }
 
 .footer__creator {
+  font-weight: 700;
   font-size: 19px;
   line-height: 18px;
   color: $base-black;
-  font-weight: 700;
 }
