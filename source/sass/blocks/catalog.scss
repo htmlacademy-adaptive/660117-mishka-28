@@ -13,24 +13,6 @@
   }
 }
 
-.product__img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-
-  object-fit: contain;
-
-  @media (min-width: $tablet-width) {
-    margin: 0 0 0 auto;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: fit-content;
-    height: fit-content;
-  }
-}
-
 .catalog__list {
   margin: 0;
   padding: 0;

@@ -121,6 +121,12 @@
   }
 }
 
+.feedbacks__author-wrapper {
+  @media (min-width: $tablet-width) {
+    margin-right: 200px;
+  }
+}
+
 .feedbacks__name {
   display: block;
 

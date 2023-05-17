@@ -38,8 +38,9 @@
 
 .footer__contacts-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin: 0;
+  margin: 0 30px;
   padding: 0 0 28px 0;
 
   list-style: none;
@@ -51,6 +52,8 @@
   @media (min-width: $tablet-width) {
     margin: 0;
     padding: 0;
+
+    max-width: 300px;
 
     border-bottom: none;
   }
@@ -100,6 +103,7 @@
 
 .footer__creator-svg {
   margin-left: 25px;
+  flex-shrink: 0;
 }
 
 .footer__creator {
