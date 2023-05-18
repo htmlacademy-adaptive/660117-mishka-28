@@ -97,7 +97,7 @@
 }
 
 .intro--inner {
-  padding: 74px 42px;
+  padding: 74px 20px;
 
   background-color: $title-background-color;
   background-image: none;
@@ -148,7 +148,7 @@
   &:active {
     background-color: $interiors-link-down;
 
-    & .intro__svg {
+    .intro__svg {
       opacity: 0.6;
     }
   }
@@ -167,7 +167,7 @@
   &:active {
     background-color: $toys-link-down;
 
-    & .intro__svg {
+    .intro__svg {
       opacity: 0.6;
     }
   }

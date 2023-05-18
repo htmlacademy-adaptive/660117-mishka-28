@@ -32,14 +32,14 @@
     padding: 16px;
   }
 
-  & + svg {
+  + svg {
     opacity: 0.2;
   }
 
   &:hover {
     box-shadow: inset 0 -2px 0 $azure;
 
-    & + svg {
+    + svg {
       opacity: 1;
 
       fill: $azure;
@@ -50,7 +50,7 @@
     outline: none;
     box-shadow: inset 0 -2px 0 $dark-azure;
 
-    & + svg {
+    + svg {
       opacity: 1;
 
       fill: $dark-azure;

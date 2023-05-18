@@ -8,13 +8,13 @@
   &:hover {
     cursor: pointer;
 
-    & .radio__mark {
+    .radio__mark {
       border-color: $azure;
     }
   }
 
   &:active {
-    & .radio__mark {
+    .radio__mark {
       border-color: rgba($base-black, 0.1);
     }
   }
@@ -58,6 +58,10 @@
 
 .radio__input:focus-visible + .radio__mark {
   box-shadow: 0 0 0 5px $light-black;
+}
+
+.radio__input[disabled] + .radio__mark {
+  opacity: 0.2;
 }
 
 .radio__text {
