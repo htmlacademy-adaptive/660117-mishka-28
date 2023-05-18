@@ -1,14 +1,4 @@
 .nav {
-  &--nojs {
-    & .nav__list--site {
-      position: static;
-    }
-
-    & .nav__list--user {
-      position: static;
-    }
-  }
-
   @media (min-width: $tablet-width) {
     display: grid;
 
@@ -23,6 +13,16 @@
       "nav-site logo nav-user"
       "nav-desktop . delivery";
     grid-template-columns: 1fr 150px 1fr;
+  }
+}
+
+.nav--nojs {
+  .nav__list--site {
+    position: static;
+  }
+
+  .nav__list--user {
+    position: static;
   }
 }
 
@@ -241,7 +241,7 @@
   padding-left: 76px;
 
   @media (min-width: $tablet-width) {
-    padding: 21px 0;
+    padding: 25px 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -293,7 +293,7 @@
   display: flex;
   align-items: center;
 
-  &:hover span {
+  &:hover {
     opacity: 0.6;
   }
 

@@ -34,6 +34,17 @@
   }
 }
 
+.advantages__wrapper {
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
 .advantages__list {
   margin: 0;
   padding: 0;
@@ -41,19 +52,11 @@
   list-style: none;
 
   @media (min-width: $tablet-width) {
-    display: grid;
+    display: flex;
 
     gap: 29px 30px;
 
-    grid-template-areas:
-      "eco with-love"
-      "price protect"
-      "like present";
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-template-columns: 1fr 1fr 130px;
+    flex-wrap: wrap;
   }
 }
 
@@ -68,6 +71,7 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 22px;
+    width: 300px;
   }
 }
 
@@ -77,7 +81,7 @@
   background-position: 8px 28px;
 
   @media (min-width: $tablet-width) {
-    grid-area: eco;
+    order: 1;
   }
 }
 
@@ -87,7 +91,7 @@
   background-position: 0 30px;
 
   @media (min-width: $tablet-width) {
-    grid-area: price;
+    order: 3;
   }
 }
 
@@ -97,7 +101,7 @@
   background-position: 5px 37px;
 
   @media (min-width: $tablet-width) {
-    grid-area: like;
+    order: 5;
   }
 }
 
@@ -107,7 +111,7 @@
   background-position: 3px 32px;
 
   @media (min-width: $tablet-width) {
-    grid-area: with-love;
+    order: 2;
   }
 }
 
@@ -117,7 +121,7 @@
   background-position: -6px 33px;
 
   @media (min-width: $tablet-width) {
-    grid-area: protect;
+    order: 4;
   }
 }
 
@@ -127,6 +131,6 @@
   background-position: 3px 32px;
 
   @media (min-width: $tablet-width) {
-    grid-area: present;
+    order: 6;
   }
 }

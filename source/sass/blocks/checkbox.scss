@@ -8,13 +8,13 @@
   &:hover {
     cursor: pointer;
 
-    & .checkbox__mark {
+    .checkbox__mark {
       outline-color: $azure;
     }
   }
 
   &:active {
-    & .checkbox__mark {
+    .checkbox__mark {
       outline-color: rgba($base-black, 0.1);
     }
   }
@@ -67,6 +67,10 @@
 
 .checkbox__input:focus-visible + .checkbox__mark {
   box-shadow: 0 0 0 5px $light-black;
+}
+
+.checkbox__input[disabled] + .checkbox__mark {
+  opacity: 0.2;
 }
 
 .checkbox__text {
